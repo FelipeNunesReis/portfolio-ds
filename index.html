@@ -9,20 +9,26 @@
   <meta name="description" content="Portfólio profissional — Felipe Nunes Reis. Analytics, RPA, IA, Python, SQL e Microsoft Fabric." />
 </head>
 <body>
+  <!-- LANGUAGE SWITCHER -->
+  <div class="language-switcher">
+    <button class="lang-btn active" data-lang="pt">PT</button>
+    <button class="lang-btn" data-lang="es">ES</button>
+    <button class="lang-btn" data-lang="en">EN</button>
+  </div>
+
+  <!-- HEADER -->
   <header class="site-header">
     <div class="container header-grid">
       <div class="brand">
         <a href="#" class="brand-link">Felipe <span>Nunes</span></a>
       </div>
-
       <nav class="nav" aria-label="Navegação principal">
-        <a href="#sobre">Sobre</a>
-        <a href="#experiencia">Experiência</a>
-        <a href="#projetos">Projetos</a>
-        <a href="#habilidades">Habilidades</a>
-        <a href="#contato">Contato</a>
+        <a href="#sobre" id="navSobre">Sobre</a>
+        <a href="#experiencia" id="navExperiencia">Experiência</a>
+        <a href="#projetos" id="navProjetos">Projetos</a>
+        <a href="#habilidades" id="navHabilidades">Habilidades</a>
+        <a href="#contato" id="navContato">Contato</a>
       </nav>
-
       <div class="header-actions">
         <a class="ghost-btn" href="https://www.linkedin.com/in/felipe-nunes-reis-b3a3061b6/" target="_blank" rel="noopener">LinkedIn</a>
         <a class="ghost-btn" href="https://github.com/FelipeNunesReis" target="_blank" rel="noopener">GitHub</a>
@@ -35,24 +41,21 @@
     <section class="hero">
       <div class="container hero-grid">
         <div class="hero-left">
-          <h1 class="reveal">Felipe Nunes Reis</h1>
-          <p class="lead reveal-del">Analista de Sistemas | Data Analytics | Data Science |</p>
-          <p class="muted reveal-del-2">
+          <h1 id="heroTitle" class="reveal">Felipe Nunes Reis</h1>
+          <p id="heroSubtitle" class="lead reveal-del">Analista de Sistemas | Data Analytics | Data Science |</p>
+          <p id="heroLead" class="muted reveal-del-2">
             Profissional sênior em arquitetura e governança de dados, pipelines ETL/ELT, automações e soluções analíticas. Forte experiência em Python, SQL e Power BI.
           </p>
-
           <div class="hero-cta reveal-del-3">
-            <a class="btn" href="#contato">Contrate-me</a>
-            <a class="btn outline" href="assets/CV_Felipe_Nunes_Reis.pdf" download>Baixar CV</a>
+            <a id="hireBtn" class="btn" href="#contato">Contrate-me</a>
+            <a id="downloadCV" class="btn outline" href="assets/CV_Felipe_Nunes_Reis.pdf" download>Baixar CV</a>
           </div>
-
           <ul class="meta-cards reveal-del-4">
             <li><strong>Experiência</strong><span>Sênior / 4+ anos</span></li>
             <li><strong>Stack</strong><span>Python · SQL · Power BI</span></li>
             <li><strong>Foco</strong><span>Analytics · Data Science · IA</span></li>
           </ul>
         </div>
-
         <aside class="hero-right reveal">
           <div class="photo-frame">
             <img src="images/fotoportfolio.png" alt="Foto de Felipe Nunes Reis" id="profilePhoto" />
@@ -66,18 +69,15 @@
     <!-- SOBRE -->
     <section id="sobre" class="section">
       <div class="container">
-        <h2 class="section-title reveal">Sobre mim</h2>
-
-        <p class="reveal-del">
-          Ao longo da minha trajetória profissional, tive a oportunidade de atuar em diversas áreas dentro da empresa, iniciando pela manufatura e evoluindo de forma natural para o universo da tecnologia. Essa vivência no chão de fábrica me proporcionou uma visão completa dos processos, desafios e necessidades operacionais, conhecimento que hoje aplico no desenvolvimento de soluções que realmente transformam o negócio.
+        <h2 id="sobreTitle" class="section-title reveal">Sobre mim</h2>
+        <p id="sobreP1" class="reveal-del">
+          Ao longo da minha trajetória profissional, tive a oportunidade de atuar em diversas áreas dentro da empresa, iniciando pela manufatura e evoluindo de forma natural para o universo da tecnologia.
         </p>
-
-        <p class="reveal-del-2">
-          Com o tempo, aprofundei-me em automações, dados e estratégias de digitalização, sempre com foco em otimizar processos e tornar operações complexas mais inteligentes e eficientes. Atualmente, trabalho criando automações, pipelines e soluções que impulsionam a transformação digital do ambiente fabril, contribuindo para a jornada rumo à Indústria 4.0.
+        <p id="sobreP2" class="reveal-del-2">
+          Com o tempo, aprofundei-me em automações, dados e estratégias de digitalização, sempre com foco em otimizar processos e tornar operações complexas mais inteligentes e eficientes.
         </p>
-
-        <p class="reveal-del-3">
-          Sou um profissional sênior especializado em arquitetura, modelagem e governança de dados para Data Warehouse e Data Lake, com forte atuação na plataforma Microsoft Fabric. Desenvolvo pipelines ETL/ELT em Python, automações e RPA, entregando soluções escaláveis, confiáveis e alinhadas às estratégias do negócio.
+        <p id="sobreP3" class="reveal-del-3">
+          Sou um profissional sênior especializado em arquitetura, modelagem e governança de dados para Data Warehouse e Data Lake, com forte atuação na plataforma Microsoft Fabric.
         </p>
       </div>
     </section>
@@ -85,24 +85,22 @@
     <!-- EXPERIÊNCIA -->
     <section id="experiencia" class="section alt">
       <div class="container">
-        <h2 class="section-title reveal">Experiência</h2>
+        <h2 id="experienciaTitle" class="section-title reveal">Experiência</h2>
         <div class="cards-grid">
           <article class="card reveal-card">
-            <h3>Analista de Sistemas — Nadir S/A</h3>
+            <h3 id="exp1Title">Analista de Sistemas — Nadir S/A</h3>
             <span class="time">Set 2025 — Presente</span>
-            <p>Atuação sênior em arquitetura e governança de dados, pipelines analíticos, otimização de ETL/ELT com Python e automações RPA, garantindo alta disponibilidade e qualidade dos dados.</p>
+            <p id="exp1Desc">Atuação sênior em arquitetura e governança de dados, pipelines analíticos, otimização de ETL/ELT com Python e automações RPA, garantindo alta disponibilidade e qualidade dos dados.</p>
           </article>
-
           <article class="card reveal-card">
-            <h3>Preparador de Máquinas H-28</h3>
+            <h3 id="exp2Title">Preparador de Máquinas H-28</h3>
             <span class="time">Abr 2022 — Set 2025</span>
-            <p>Manutenções, análise de falhas, relatórios operacionais e uso diário de SAP para controle de estoque e processos internos.</p>
+            <p id="exp2Desc">Manutenções, análise de falhas, relatórios operacionais e uso diário de SAP para controle de estoque e processos internos.</p>
           </article>
-
           <article class="card reveal-card">
-            <h3>Mecânico Ajustador C</h3>
+            <h3 id="exp3Title">Mecânico Ajustador C</h3>
             <span class="time">Jul 2019 — Abr 2021</span>
-            <p>Melhorias em equipamentos com foco em redução de falhas e aumento de produtividade. Formação técnica pelo SENAI.</p>
+            <p id="exp3Desc">Melhorias em equipamentos com foco em redução de falhas e aumento de produtividade. Formação técnica pelo SENAI.</p>
           </article>
         </div>
       </div>
@@ -111,18 +109,35 @@
     <!-- PROJETOS -->
     <section id="projetos" class="section">
       <div class="container">
-        <h2 class="section-title reveal">Projetos / Exemplos</h2>
+        <h2 id="projetosTitle" class="section-title reveal">Projetos / Exemplos</h2>
         <div class="projects-grid">
+          <!-- Projeto 1 -->
           <div class="project reveal-card">
-            <h4>Recomendador de Música Spotify</h4>
-            <p>Projeto de sistema de recomendação de músicas utilizando técnicas de machine learning para analisar preferências do usuário.</p>
-            <a class="link" href="#" onclick="openImageModal('images/carbon.png')" aria-label="Ver projeto">Ver</a>
+            <h4 id="proj1Title">Recomendador de Música Spotify</h4>
+            <p id="proj1Desc">Projeto de sistema de recomendação de músicas utilizando machine learning.</p>
+            <button class="btn-glow open-project" data-project="recomendador">Ver Projeto</button>
+            <div class="project-detail" id="recomendador">
+              <h5>Detalhes do Projeto</h5>
+              <p id="proj1Obj"><strong>Objetivo:</strong> Melhorar a retenção do usuário e entregar recomendações relevantes.</p>
+              <div class="photo-frame">
+                <img src="images/carbon.png" alt="Recomendador de Música" />
+              </div>
+              <button class="btn-glow close-project">Fechar</button>
+            </div>
           </div>
-
+          <!-- Projeto 2 -->
           <div class="project reveal-card">
-            <h4>Dashboards</h4>
-            <p>Fluxo de Caixa</p>
-            <a class="link" href="#" onclick="openImageModal('images/projetopptx.png')" aria-label="Ver PNG">Fluxo de Caixa</a>
+            <h4 id="proj2Title">Dashboard — Fluxo de Caixa</h4>
+            <p id="proj2Desc">Dashboard financeiro em PNG com indicadores e visualizações.</p>
+            <button class="btn-glow open-project" data-project="fluxocaixa">Ver Projeto</button>
+            <div class="project-detail" id="fluxocaixa">
+              <h5>Detalhes do Projeto</h5>
+              <p id="proj2Obj"><strong>Objetivo:</strong> Entregar visibilidade financeira de forma ágil e automatizar a atualização dos relatórios.</p>
+              <div class="photo-frame">
+                <img src="images/projetopptx.png" alt="Dashboard Fluxo de Caixa" />
+              </div>
+              <button class="btn-glow close-project">Fechar</button>
+            </div>
           </div>
         </div>
       </div>
@@ -131,24 +146,12 @@
     <!-- HABILIDADES -->
     <section id="habilidades" class="section alt">
       <div class="container">
-        <h2 class="section-title reveal">Habilidades</h2>
+        <h2 id="habilidadesTitle" class="section-title reveal">Habilidades</h2>
         <div class="skills">
-          <div class="skill reveal-card">
-            <h5>Python</h5>
-            <div class="bar"><div class="progress" data-value="95"></div></div>
-          </div>
-          <div class="skill reveal-card">
-            <h5>SQL</h5>
-            <div class="bar"><div class="progress" data-value="92"></div></div>
-          </div>
-          <div class="skill reveal-card">
-            <h5>Power BI</h5>
-            <div class="bar"><div class="progress" data-value="88"></div></div>
-          </div>
-          <div class="skill reveal-card">
-            <h5>RPA / Automação</h5>
-            <div class="bar"><div class="progress" data-value="90"></div></div>
-          </div>
+          <div class="skill reveal-card"><h5>Python</h5><div class="bar"><div class="progress" data-value="95"></div></div></div>
+          <div class="skill reveal-card"><h5>SQL</h5><div class="bar"><div class="progress" data-value="92"></div></div></div>
+          <div class="skill reveal-card"><h5>Power BI</h5><div class="bar"><div class="progress" data-value="88"></div></div></div>
+          <div class="skill reveal-card"><h5>RPA / Automação</h5><div class="bar"><div class="progress" data-value="90"></div></div></div>
         </div>
       </div>
     </section>
@@ -156,18 +159,22 @@
     <!-- CONTATO -->
     <section id="contato" class="section contact">
       <div class="container">
-        <h2 class="section-title reveal">Contato</h2>
+        <h2 id="contatoTitle" class="section-title reveal">Contato</h2>
         <div class="contact-grid">
           <div class="contact-card reveal-card">
-            <h4>Email</h4>
+            <h4 id="emailTitle">Email</h4>
             <a class="ghost-btn" href="mailto:felipenunesreis.2015@gmail.com">felipenunesreis.2015@gmail.com</a>
-            <h4>Telefone</h4>
-            <p>(11) 94542-4718</p>
+            <h4 id="telefoneTitle">Telefone</h4>
+            <p>(+55) 11 94542-4718</p>
+            <h4 id="whatsappTitle">WhatsApp</h4>
+            <a class="ghost-btn" href="https://wa.me/5511945424718" target="_blank" rel="noopener">
+              <img src="assets/WhatsApp.svg" alt="WhatsApp" style="width:20px;"> WhatsApp
+            </a>
           </div>
-
           <div class="contact-card reveal-card">
-            <h4>Currículo</h4>
-            <p>Os detalhes completos estão no CV (disponível para download).</p>
+            <h4 id="cvTitle">Currículo</h4>
+            <a class="ghost-btn" href="assets/CV_Felipe_Nunes_Reis.pdf" download>Baixar CV</a>
+            <h4 id="rdTitle">Redes</h4>
             <div class="socials">
               <a class="ghost-btn" href="https://www.linkedin.com/in/felipe-nunes-reis-b3a3061b6/" target="_blank" rel="noopener">LinkedIn</a>
               <a class="ghost-btn" href="https://github.com/FelipeNunesReis" target="_blank" rel="noopener">Github</a>
@@ -176,7 +183,6 @@
         </div>
       </div>
     </section>
-
   </main>
 
   <footer class="site-footer">
@@ -185,17 +191,7 @@
     </div>
   </footer>
 
-  <!-- MODAIS -->
-  <div id="imageModal" class="img-modal">
-    <span class="close-modal" onclick="closeImageModal()">&times;</span>
-    <img class="img-modal-content" id="modalImage">
-  </div>
-
-  <div id="pdfModal" class="img-modal">
-    <span class="close-modal" onclick="closePdfModal()">&times;</span>
-    <embed id="modalPdf" class="pdf-modal-content" type="application/pdf" />
-  </div>
-
   <script src="js/script.js"></script>
+  <script src="js/lang.js"></script>
 </body>
 </html>
