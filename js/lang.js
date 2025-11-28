@@ -10,6 +10,11 @@ const translations = {
     navProjetos: "Projetos",
     navHabilidades: "Habilidades",
     navContato: "Contato",
+    navSobreMobile: "Sobre",
+    navExperienciaMobile: "Experiência",
+    navProjetosMobile: "Projetos",
+    navHabilidadesMobile: "Habilidades",
+    navContatoMobile: "Contato",
 
     heroTitle: "Felipe Nunes Reis",
     heroSubtitle: "Analista de Sistemas | Data Analytics | Data Science |",
@@ -39,6 +44,7 @@ const translations = {
     proj2Obj: "Objetivo: Entregar visibilidade financeira de forma ágil e automatizar a atualização dos relatórios.",
 
     habilidadesTitle: "Habilidades",
+    contatoTitle: "Contato",
     emailTitle: "Email",
     telefoneTitle: "Telefone",
     whatsappTitle: "WhatsApp",
@@ -51,6 +57,11 @@ const translations = {
     navProjetos: "Projects",
     navHabilidades: "Skills",
     navContato: "Contact",
+    navSobreMobile: "About",
+    navExperienciaMobile: "Experience",
+    navProjetosMobile: "Projects",
+    navHabilidadesMobile: "Skills",
+    navContatoMobile: "Contact",
 
     heroTitle: "Felipe Nunes Reis",
     heroSubtitle: "Systems Analyst | Data Analytics | Data Science |",
@@ -93,6 +104,11 @@ const translations = {
     navProjetos: "Proyectos",
     navHabilidades: "Habilidades",
     navContato: "Contacto",
+    navSobreMobile: "Sobre mí",
+    navExperienciaMobile: "Experiencia",
+    navProjetosMobile: "Proyectos",
+    navHabilidadesMobile: "Habilidades",
+    navContatoMobile: "Contacto",
 
     heroTitle: "Felipe Nunes Reis",
     heroSubtitle: "Analista de Sistemas | Data Analytics | Data Science |",

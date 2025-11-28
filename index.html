@@ -9,31 +9,47 @@
   <meta name="description" content="Portfólio profissional — Felipe Nunes Reis. Analytics, RPA, IA, Python, SQL e Microsoft Fabric." />
 </head>
 <body>
-  <!-- LANGUAGE SWITCHER -->
-  <div class="language-switcher">
-    <button class="lang-btn active" data-lang="pt">PT</button>
-    <button class="lang-btn" data-lang="es">ES</button>
-    <button class="lang-btn" data-lang="en">EN</button>
-  </div>
 
   <!-- HEADER -->
   <header class="site-header">
     <div class="container header-grid">
-      <div class="brand">
-        <a href="#" class="brand-link">Felipe <span>Nunes</span></a>
-      </div>
-      <nav class="nav" aria-label="Navegação principal">
-        <a href="#sobre" id="navSobre">Sobre</a>
-        <a href="#experiencia" id="navExperiencia">Experiência</a>
-        <a href="#projetos" id="navProjetos">Projetos</a>
-        <a href="#habilidades" id="navHabilidades">Habilidades</a>
-        <a href="#contato" id="navContato">Contato</a>
+      <!-- Logo -->
+      <a href="#" class="brand-link">Felipe <span>Nunes</span></a>
+
+      <!-- Navegação principal -->
+      <nav class="nav">
+        <a id="navSobre" href="#sobre">Sobre</a>
+        <a id="navExperiencia" href="#experiencia">Experiência</a>
+        <a id="navProjetos" href="#projetos">Projetos</a>
+        <a id="navHabilidades" href="#habilidades">Habilidades</a>
+        <a id="navContato" href="#contato">Contato</a>
       </nav>
+
+      <!-- Ações e Language Switcher -->
       <div class="header-actions">
-        <a class="ghost-btn" href="https://www.linkedin.com/in/felipe-nunes-reis-b3a3061b6/" target="_blank" rel="noopener">LinkedIn</a>
-        <a class="ghost-btn" href="https://github.com/FelipeNunesReis" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/felipe-nunes-reis-b3a3061b6/" class="ghost-btn">LinkedIn</a>
+        <a href="https://github.com/FelipeNunesReis" class="ghost-btn">GitHub</a>
+
+        <!-- Language Switcher -->
+        <div class="language-switcher">
+          <button class="lang-btn active" data-lang="pt">PT</button>
+          <button class="lang-btn" data-lang="es">ES</button>
+          <button class="lang-btn" data-lang="en">EN</button>
+        </div>
+
+        <!-- Mobile menu button -->
+        <button id="mobileMenuBtn" class="mobile-menu-btn">&#9776;</button>
       </div>
     </div>
+
+    <!-- Mobile Nav -->
+    <nav class="nav mobile-nav">
+      <a id="navSobreMobile" href="#sobre">Sobre</a>
+      <a id="navExperienciaMobile" href="#experiencia">Experiência</a>
+      <a id="navProjetosMobile" href="#projetos">Projetos</a>
+      <a id="navHabilidadesMobile" href="#habilidades">Habilidades</a>
+      <a id="navContatoMobile" href="#contato">Contato</a>
+    </nav>
   </header>
 
   <main>
@@ -125,6 +141,7 @@
               <button class="btn-glow close-project">Fechar</button>
             </div>
           </div>
+
           <!-- Projeto 2 -->
           <div class="project reveal-card">
             <h4 id="proj2Title">Dashboard — Fluxo de Caixa</h4>
