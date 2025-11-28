@@ -186,14 +186,16 @@ body{
 .language-switcher {
   position: fixed;
   top: 80px; /* afasta do topo do header */
-  right: 75px;
+  right: 68px;
   display: flex;
   gap: 8px;
   z-index: 1000;
 }
 
-
 .language-switcher .lang-btn {
+  --primary-color: #ff4d00; /* cor de destaque, glow */
+  --bg-color: transparent;    /* fundo do botão de idioma */
+  --text-color: var(--text); /* texto branco padrão */
   padding: 6px 14px;
   border: 2px solid var(--primary-color);
   background: var(--bg-color);
