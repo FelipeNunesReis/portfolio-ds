@@ -3,104 +3,502 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Equipment Changeover Tracker — Felipe Nunes Reis</title>
-  <meta name="description" content="A Python and Microsoft Fabric web app to record equipment changeovers, track spare stock and monitor useful life." />
-  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <title>Equipment Changeover Tracker — Case study — Felipe Nunes Reis</title>
+  <meta name="description" content="Case study: a Python and Microsoft Fabric web app for a glass manufacturer that records equipment changeovers, machine setups, reserve stock, maintenance flow and run time, with Entra ID sign-in and row-level security." />
+  <meta name="theme-color" content="#0e0e11" />
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" />
   <link rel="stylesheet" href="../css/style.css" />
+  <script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
   <header class="site-header">
     <div class="container header-grid">
-      <a href="../index.html" class="brand-link">Felipe <span>Nunes Reis</span></a>
+      <a href="../index.html" class="brand">Felipe <span>Nunes Reis</span></a>
       <nav class="nav" aria-label="Main">
+        <a href="../index.html">Home</a>
         <a href="../index.html#about">About</a>
-        <a href="../index.html#experience">Experience</a>
-        <a href="../index.html#projects">Projects</a>
+        <a href="../index.html#projects" aria-current="true">Projects</a>
         <a href="../index.html#skills">Skills</a>
+        <a href="../index.html#experience">Experience</a>
         <a href="../index.html#contact">Contact</a>
       </nav>
       <div class="header-actions">
-        <a href="https://www.linkedin.com/in/felipe-nunes-reis-b3a3061b6/" class="ghost-btn" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="https://github.com/FelipeNunesReis" class="ghost-btn" target="_blank" rel="noopener">GitHub</a>
-        <button id="mobileMenuBtn" class="mobile-menu-btn" aria-label="Open menu" aria-expanded="false">&#9776;</button>
+        <a class="btn ghost" href="https://www.linkedin.com/in/felipe-nunes-reis-b3a3061b6/" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn ghost" href="https://github.com/FelipeNunesReis" target="_blank" rel="noopener">GitHub</a>
+        <button class="icon-btn theme-toggle" type="button" aria-label="Switch theme">
+          <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+          <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        </button>
+        <button class="icon-btn menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
       </div>
     </div>
-    <nav class="nav mobile-nav" aria-label="Mobile">
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile">
+      <a href="../index.html">Home</a>
       <a href="../index.html#about">About</a>
-      <a href="../index.html#experience">Experience</a>
       <a href="../index.html#projects">Projects</a>
       <a href="../index.html#skills">Skills</a>
+      <a href="../index.html#experience">Experience</a>
       <a href="../index.html#contact">Contact</a>
     </nav>
   </header>
 
-  <main class="container">
-    <section class="project-hero">
-      <a class="back-link" href="../index.html#projects">← Back to projects</a>
-      <p class="project-kicker">Python · Flask · Microsoft Fabric</p>
+  <main id="main" class="container">
+    <section class="cs-hero">
+      <a class="back" href="../index.html#projects"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"/></svg> All projects</a>
+      <span class="eyebrow">Web &amp; Data (Fabric) · Case study 4 of 6</span>
       <h1>Equipment Changeover Tracker</h1>
-      <p class="lead">A web app to record equipment changeovers on production lines, track spare stock and monitor each part's useful life, built for an industrial company.</p>
+      <p class="lead">A web application for a glass manufacturer that records equipment changeovers on forming machines, the article in production, reserve stock and run time, on a Microsoft Fabric Lakehouse with Microsoft sign-in and per-line access control. Python and Flask on the back end, vanilla JavaScript on the front end, 91 automated tests.</p>
+      <ul class="badges"><li>Python 3.12</li><li>Flask</li><li>JavaScript (ES modules)</li><li>Microsoft Fabric</li><li>Delta Lake</li><li>Entra ID</li><li>SQLite</li><li>Playwright</li></ul>
+      <dl class="cs-meta">
+        <div><dt>My role</dt><dd>Designed and built end to end</dd></div>
+        <div><dt>Built for</dt><dd>Production and mold maintenance of a glass manufacturer</dd></div>
+        <div><dt>Scope</dt><dd>7 screens, 8 Lakehouse tables, 26 production lines</dd></div>
+        <div><dt>Theme</dt><dd>Light and dark (switch the site theme to see both)</dd></div>
+      </dl>
     </section>
 
-    <div class="project-layout">
+    <div class="cs-layout">
+      <nav class="cs-toc" aria-label="On this page">
+        <ol>
+          <li><a href="#overview">Overview</a></li>
+          <li><a href="#context">Context and problem</a></li>
+          <li><a href="#role">My role</a></li>
+          <li><a href="#numbers">By the numbers</a></li>
+          <li><a href="#architecture">Architecture</a></li>
+          <li><a href="#flow">A changeover, step by step</a></li>
+          <li><a href="#lifecycle">Equipment lifecycle</a></li>
+          <li><a href="#features">Key features</a></li>
+          <li><a href="#highlights">Technical highlights</a></li>
+          <li><a href="#challenges">Challenges</a></li>
+          <li><a href="#process">Development process</a></li>
+          <li><a href="#results">Results</a></li>
+          <li><a href="#tools">Tools</a></li>
+        </ol>
+      </nav>
+
       <article>
-        <section class="project-section">
-          <h2>Problem</h2>
-          <p>Equipment changes on production lines (molds and other machine parts), spare stock and wear were tracked manually. There was no reliable history and no early warning before spare stock or a part's useful life ran out.</p>
+        <section class="cs-section" id="overview">
+          <h2>Overview</h2>
+          <p>Forming machines in a glass plant run with dozens of interchangeable parts: molds, blanks, crowns, plungers, neck rings, chucks, burners and more, one per section and sometimes one per side. This application gives the factory a single record of what is installed where, which article is in production, how many spare parts are in reserve, how long each part has run, and where every part is in its lifecycle (reserve, machine, maintenance, stock). It covers the IS, H-28/Burn-Off, Opaline and Press lines: 4 processes and 26 parameterized production lines.</p>
+          <p>The back end is a Flask REST API that also serves the front end. Data lives in a Microsoft Fabric Lakehouse (Delta Tables), where it is also available to Power BI. Users sign in with their Microsoft account and only see the processes and lines they are allowed to.</p>
         </section>
 
-        <section class="project-section">
-          <h2>Solution</h2>
-          <p>A web app for the shop floor with a Python (Flask) API and a lightweight HTML/CSS/JavaScript front end. Data lives in a Microsoft Fabric Lakehouse: the app reads through the SQL analytics endpoint and writes directly to Delta tables in OneLake. Users sign in with Microsoft Entra ID and only see the production lines they have access to.</p>
+        <section class="cs-section" id="context">
+          <h2>Context and problem</h2>
+          <p>Before this system, changeovers, the article in production and the balance of reserve parts had no centralized record. It was hard to know what was in each position of a machine, how long a piece of equipment had been running, and when a reserve had become critical. Production and mold maintenance each kept their own view of the same parts.</p>
         </section>
 
-        <section class="project-section">
+        <section class="cs-section" id="role">
+          <h2>My role</h2>
+          <p>I designed and built the whole system: the data model in the Lakehouse, the Flask API and its security, the front end and its design system, the Fabric integration, the deployment on a Windows server, the automated tests and the end-to-end browser tests. Development was iterative and guided by real use on the factory floor.</p>
+        </section>
+
+        <section class="cs-section" id="numbers">
+          <h2>By the numbers</h2>
+          <ul class="numbers">
+            <li><strong>~9,600</strong><span>lines of code (Python, JS, HTML, CSS, SQL, PowerShell)</span></li>
+            <li><strong>7</strong><span>screens</span></li>
+            <li><strong>8</strong><span>Lakehouse tables</span></li>
+            <li><strong>4</strong><span>production processes</span></li>
+            <li><strong>26</strong><span>production lines parameterized</span></li>
+            <li><strong>91</strong><span>automated tests</span></li>
+            <li><strong>~0.03 s</strong><span>screen refresh after the read cache (was 3.6–5.3 s)</span></li>
+          </ul>
+        </section>
+
+        <section class="cs-section" id="architecture">
+          <h2>Architecture</h2>
+          <p>Three layers, with the back end as the only point of access to the data. The browser never talks to Fabric directly.</p>
+          <figure class="diagram">
+            <svg viewBox="0 0 960 700" role="img" aria-labelledby="dgx-title dgx-desc">
+              <title id="dgx-title">Equipment Changeover Tracker architecture</title>
+              <desc id="dgx-desc">Browser with HTML, CSS and JavaScript modules calls a Flask REST API with fetch JSON and a session cookie. The API has four modules: auth (Entra ID login via MSAL, session, authorization by process, line and role), app (routes, input validation, access rules), config (central parameters) and database (Repository pattern with a SQLite implementation for development and a Fabric implementation for production). The Fabric repository writes to Delta Tables on OneLake with deltalake and PyArrow, and reads from the Delta Tables with a per-table cache or from the SQL analytics endpoint with pyodbc. Data lives in a Microsoft Fabric Lakehouse with eight Delta Tables and row-level security, and is also available to Power BI. Entra ID is used for sign-in.</desc>
+              <defs>
+                <marker id="dgx-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5 0 10z" fill="var(--muted)"/></marker>
+              </defs>
+              <g font-size="14" font-family="inherit">
+                <!-- Browser -->
+                <rect x="20" y="20" width="920" height="92" rx="12" fill="var(--panel-2)" stroke="var(--line-strong)"/>
+                <text x="40" y="48" fill="var(--text)" font-weight="700">Browser</text>
+                <text x="40" y="70" fill="var(--muted)" font-size="13">HTML5 · CSS3 · JavaScript (ES modules), no framework · design tokens, light/dark theme · responsive</text>
+                <text x="40" y="94" fill="var(--muted)" font-size="13">Screens: Machine setup · Log changeover · Reserve stock · Inventory · Alert monitor · Run time · Access</text>
+
+                <!-- Entra ID -->
+                <rect x="760" y="150" width="180" height="70" rx="12" fill="var(--panel-2)" stroke="var(--line-strong)"/>
+                <text x="850" y="178" text-anchor="middle" fill="var(--text)" font-weight="600">Microsoft Entra ID</text>
+                <text x="850" y="200" text-anchor="middle" fill="var(--muted)" font-size="12.5">OpenID Connect · PKCE</text>
+
+                <!-- Flask -->
+                <rect x="20" y="150" width="710" height="330" rx="14" fill="var(--accent-soft)" stroke="var(--accent)"/>
+                <text x="40" y="178" fill="var(--text)" font-weight="700">Flask REST API</text>
+                <text x="190" y="178" fill="var(--muted)" font-size="12.5">Python 3.12 · Waitress / Cheroot (HTTPS)</text>
+
+                <rect x="40" y="195" width="200" height="86" rx="10" fill="var(--panel)" stroke="var(--line-strong)"/>
+                <text x="140" y="218" text-anchor="middle" fill="var(--text)" font-weight="600">auth</text>
+                <text x="140" y="238" text-anchor="middle" fill="var(--muted)" font-size="12.5">Entra ID login (MSAL)</text>
+                <text x="140" y="256" text-anchor="middle" fill="var(--muted)" font-size="12.5">session cookie</text>
+                <text x="140" y="274" text-anchor="middle" fill="var(--muted)" font-size="12.5">process / line / role checks</text>
+
+                <rect x="260" y="195" width="200" height="86" rx="10" fill="var(--panel)" stroke="var(--line-strong)"/>
+                <text x="360" y="218" text-anchor="middle" fill="var(--text)" font-weight="600">app</text>
+                <text x="360" y="238" text-anchor="middle" fill="var(--muted)" font-size="12.5">routes (/api/*)</text>
+                <text x="360" y="256" text-anchor="middle" fill="var(--muted)" font-size="12.5">input validation</text>
+                <text x="360" y="274" text-anchor="middle" fill="var(--muted)" font-size="12.5">access rules</text>
+
+                <rect x="480" y="195" width="230" height="86" rx="10" fill="var(--panel)" stroke="var(--line-strong)"/>
+                <text x="595" y="218" text-anchor="middle" fill="var(--text)" font-weight="600">config</text>
+                <text x="595" y="238" text-anchor="middle" fill="var(--muted)" font-size="12.5">processes, lines, machines,</text>
+                <text x="595" y="256" text-anchor="middle" fill="var(--muted)" font-size="12.5">sections, equipment, positions,</text>
+                <text x="595" y="274" text-anchor="middle" fill="var(--muted)" font-size="12.5">useful life, reserve rules</text>
+
+                <rect x="40" y="300" width="670" height="160" rx="10" fill="var(--panel)" stroke="var(--line-strong)"/>
+                <text x="60" y="325" fill="var(--text)" font-weight="600">database — Repository pattern</text>
+                <text x="330" y="325" fill="var(--muted)" font-size="12.5">business rules live here, shared by both implementations</text>
+
+                <rect x="60" y="340" width="220" height="100" rx="10" fill="var(--panel-2)" stroke="var(--line-strong)" stroke-dasharray="5 4"/>
+                <text x="170" y="366" text-anchor="middle" fill="var(--text)" font-weight="600">SQLiteRepository</text>
+                <text x="170" y="388" text-anchor="middle" fill="var(--muted)" font-size="12.5">development and demo</text>
+                <text x="170" y="406" text-anchor="middle" fill="var(--muted)" font-size="12.5">same interface</text>
+                <text x="170" y="424" text-anchor="middle" fill="var(--muted)" font-size="12.5">selected by environment variable</text>
+
+                <rect x="300" y="340" width="390" height="100" rx="10" fill="var(--panel-2)" stroke="var(--accent)"/>
+                <text x="495" y="366" text-anchor="middle" fill="var(--text)" font-weight="600">FabricRepository (production)</text>
+                <text x="495" y="388" text-anchor="middle" fill="var(--muted)" font-size="12.5">write: Delta Tables on OneLake (deltalake / PyArrow)</text>
+                <text x="495" y="406" text-anchor="middle" fill="var(--muted)" font-size="12.5">read: Delta Tables with per-table cache, or SQL analytics endpoint (pyodbc)</text>
+                <text x="495" y="424" text-anchor="middle" fill="var(--muted)" font-size="12.5">Service Principal auth (azure-identity)</text>
+
+                <!-- Lakehouse -->
+                <rect x="20" y="540" width="710" height="140" rx="12" fill="var(--panel-2)" stroke="var(--line-strong)"/>
+                <text x="40" y="568" fill="var(--text)" font-weight="700">Microsoft Fabric Lakehouse — Delta Tables</text>
+                <text x="40" y="592" fill="var(--muted)" font-size="12.5">changeovers · machine setups · setup equipment · equipment registry</text>
+                <text x="40" y="610" fill="var(--muted)" font-size="12.5">run time · reserve balance · stock movements · user permissions</text>
+                <text x="40" y="640" fill="var(--text-2)" font-size="12.5">Row-Level Security on the SQL endpoint: readers see only their processes and lines</text>
+                <text x="40" y="660" fill="var(--muted)" font-size="12.5">Schema and RLS maintained by SQL scripts; additive, idempotent migration tool</text>
+
+                <!-- Power BI -->
+                <rect x="760" y="560" width="180" height="90" rx="12" fill="var(--panel-2)" stroke="var(--line-strong)"/>
+                <text x="850" y="596" text-anchor="middle" fill="var(--text)" font-weight="600">Power BI</text>
+                <text x="850" y="618" text-anchor="middle" fill="var(--muted)" font-size="12.5">reports on the same tables</text>
+
+                <!-- Arrows -->
+                <g stroke="var(--muted)" stroke-width="2" fill="none" marker-end="url(#dgx-arrow)">
+                  <path d="M480 112V148"/>
+                  <path d="M240 238H258"/>
+                  <path d="M460 238H478"/>
+                  <path d="M595 281V298"/>
+                  <path d="M495 440V538"/>
+                  <path d="M730 605H758"/>
+                  <path d="M760 185C700 185 320 170 240 220" stroke-dasharray="4 4"/>
+                </g>
+                <g fill="var(--muted)" font-size="12.5">
+                  <text x="492" y="135">fetch JSON (/api/*) + session cookie</text>
+                  <text x="510" y="500">write: Delta append · read: cached Delta or SQL endpoint</text>
+                  <text x="690" y="140" text-anchor="end">sign-in redirect / token</text>
+                </g>
+              </g>
+            </svg>
+            <figcaption>The browser calls only the API. Business rules are shared by both repository implementations, so SQLite (development) and Fabric (production) behave identically.</figcaption>
+          </figure>
+        </section>
+
+        <section class="cs-section" id="flow">
+          <h2>A changeover, step by step</h2>
+          <ol class="flow">
+            <li><strong>Operator selects</strong> process → line → machine → section → equipment → position. The front end uses the parameters served by the API, and what is currently installed in that position, to pre-fill the equipment being removed.</li>
+            <li><strong>POST to the changeovers endpoint.</strong> The back end validates the input against the central parameters, checks the user's role for that line, and applies the rules: an active setup must exist, a part must be in the position, the installed number must not already be in a machine, and repeated IDs are resolved.</li>
+            <li><strong>One operation writes everything:</strong> the changeover linked to the active setup, any new equipment in the registry, −1 part in reserve and +1 in maintenance (with a stock-history row), the run-time cycle closed for the removed part and opened for the installed part.</li>
+            <li><strong>Reads come before any write,</strong> so nothing is ever recorded halfway.</li>
+            <li><strong>The alert monitor</strong> picks the changeover up on its next poll and shows it full screen.</li>
+          </ol>
+        </section>
+
+        <section class="cs-section" id="lifecycle">
+          <h2>Equipment lifecycle</h2>
+          <p>Every part moves through the same cycle, and every move is a row in an auditable history. A changeover automatically takes one part out of reserve and sends the removed part to maintenance; the maintenance role completes repairs, returns parts to manufacturing and makes inventory adjustments, with a mandatory reason.</p>
+          <figure class="diagram">
+            <svg viewBox="0 0 960 200" role="img" aria-labelledby="dgl-title dgl-desc">
+              <title id="dgl-title">Equipment lifecycle</title>
+              <desc id="dgl-desc">Reserve, then machine, then maintenance, then stock, and back to reserve. A changeover moves a part from reserve to machine and the removed part from machine to maintenance; maintenance completion moves it to stock; sending to manufacturing moves it back to reserve.</desc>
+              <defs><marker id="dgl-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5 0 10z" fill="var(--muted)"/></marker></defs>
+              <g font-size="14" font-family="inherit">
+                <rect x="30" y="60" width="180" height="70" rx="12" fill="var(--accent-soft)" stroke="var(--accent)"/>
+                <text x="120" y="90" text-anchor="middle" fill="var(--text)" font-weight="600">Reserve</text>
+                <text x="120" y="112" text-anchor="middle" fill="var(--muted)" font-size="12.5">at the line, counted in parts</text>
+                <rect x="270" y="60" width="180" height="70" rx="12" fill="var(--panel-2)" stroke="var(--line-strong)"/>
+                <text x="360" y="90" text-anchor="middle" fill="var(--text)" font-weight="600">Machine</text>
+                <text x="360" y="112" text-anchor="middle" fill="var(--muted)" font-size="12.5">run-time cycle open</text>
+                <rect x="510" y="60" width="180" height="70" rx="12" fill="var(--panel-2)" stroke="var(--line-strong)"/>
+                <text x="600" y="90" text-anchor="middle" fill="var(--text)" font-weight="600">Maintenance</text>
+                <text x="600" y="112" text-anchor="middle" fill="var(--muted)" font-size="12.5">mold shop</text>
+                <rect x="750" y="60" width="180" height="70" rx="12" fill="var(--panel-2)" stroke="var(--line-strong)"/>
+                <text x="840" y="90" text-anchor="middle" fill="var(--text)" font-weight="600">Stock</text>
+                <text x="840" y="112" text-anchor="middle" fill="var(--muted)" font-size="12.5">repaired, available</text>
+                <g stroke="var(--muted)" stroke-width="2" fill="none" marker-end="url(#dgl-arrow)">
+                  <path d="M210 95H268"/><path d="M450 95H508"/><path d="M690 95H748"/>
+                  <path d="M840 130V165H120V132"/>
+                </g>
+                <g fill="var(--muted)" font-size="12">
+                  <text x="239" y="85" text-anchor="middle">changeover</text>
+                  <text x="479" y="85" text-anchor="middle">removed part</text>
+                  <text x="719" y="85" text-anchor="middle">repair done</text>
+                  <text x="480" y="185" text-anchor="middle">sent back to manufacturing</text>
+                </g>
+              </g>
+            </svg>
+            <figcaption>Reserve → machine → maintenance → stock → reserve. Inventory adjustments are allowed at any stage, with a mandatory reason.</figcaption>
+          </figure>
+        </section>
+
+        <section class="cs-section" id="features">
           <h2>Key features</h2>
-          <ul class="feature-list">
-            <li><strong>Machine setup:</strong> records the product running on each machine and a snapshot of the equipment in every position, comparing it with the previous setup (kept, changed, removed or divergent).</li>
-            <li><strong>Guided changeover entry:</strong> step-by-step flow (process → line → machine → section → equipment type → position → details) with a summary before saving.</li>
-            <li><strong>Spare stock balances</strong> per line and equipment type, with configurable critical and restock thresholds.</li>
-            <li><strong>Stock lifecycle:</strong> tracks parts moving between spare stock, machine, maintenance and storage, with a full movement history.</li>
-            <li><strong>Live activity monitor:</strong> a feed of changeovers from the shop floor, refreshed every minute, with optional sound alerts.</li>
-            <li><strong>Useful life tracking:</strong> hours each part has run compared with its reference life, flagged as within limit, near limit (80%) or over limit.</li>
-            <li><strong>Equipment registry</strong> with individual IDs, so parts that share the same number can still be told apart.</li>
-            <li><strong>Access management:</strong> admins grant roles (viewer, operator, maintenance, admin) by process and line. Row-level security in the Lakehouse applies the same rules to Power BI and SQL users.</li>
-            <li><strong>Demo mode:</strong> a local SQLite backend with the same business rules, used for development and testing.</li>
-          </ul>
-        </section>
+          <p>Screenshots follow the site theme: switch between dark and light in the header to see both versions of the app. Line numbers, article codes and records are blanked.</p>
 
-        <section class="project-section">
-          <h2>Impact</h2>
-          <ul class="feature-list">
-            <li>Designed to replace manual tracking of changeovers and spare stock with a single, auditable history.</li>
-            <li>Flags low spare stock and parts approaching the end of their useful life before they become a problem.</li>
-            <li>Keeps the data in the Lakehouse, ready for Power BI.</li>
-          </ul>
-        </section>
+          <div class="feature">
+            <div>
+              <h3>Machine setup</h3>
+              <p>Records the article in production, starts a changeover-count cycle and closes the previous one. A grid shows the equipment in every position (section × equipment × inner/outer part), compares it with the last setup and flags divergences and repeated numbers.</p>
+            </div>
+            <figure class="shot theme-shot">
+              <picture class="dark"><source type="image/webp" srcset="../images/controle_trocas/machine-setup-dark.webp" /><img src="../images/controle_trocas/machine-setup-dark.png" alt="Machine setup screen, dark theme: process tiles, line and machine steps, new setup form with article and date, and a current-setup panel" loading="lazy" width="1600" height="792" /></picture>
+              <picture class="light"><source type="image/webp" srcset="../images/controle_trocas/machine-setup-light.webp" /><img src="../images/controle_trocas/machine-setup-light.png" alt="Machine setup screen, light theme: process tiles, line and machine steps, new setup form with article and date, and a current-setup panel" loading="lazy" width="1600" height="793" /></picture>
+              <figcaption>Machine setup: process → line → machine → new setup.</figcaption>
+            </figure>
+          </div>
 
-        <section class="project-section">
-          <h2>Screenshots</h2>
-          <div class="gallery">
-            <figure><div class="placeholder"><strong>Screenshot coming soon</strong>Machine setup</div><figcaption>Machine setup and equipment snapshot</figcaption></figure>
-            <figure><div class="placeholder"><strong>Screenshot coming soon</strong>Changeover entry</div><figcaption>Guided changeover entry</figcaption></figure>
-            <figure><div class="placeholder"><strong>Screenshot coming soon</strong>Spare stock</div><figcaption>Spare stock balances and thresholds</figcaption></figure>
-            <figure><div class="placeholder"><strong>Screenshot coming soon</strong>Useful life</div><figcaption>Useful life tracking</figcaption></figure>
+          <div class="feature">
+            <div>
+              <h3>Log a changeover</h3>
+              <p>Cascading selectors (process → line → machine → section → equipment → position). The removed equipment is filled in automatically from what is registered in that position. The changeover is blocked when the machine has no active setup. A summary panel shows what will be saved, and the latest entries appear below it.</p>
+            </div>
+            <figure class="shot theme-shot">
+              <picture class="dark"><source type="image/webp" srcset="../images/controle_trocas/log-changeover-dark.webp" /><img src="../images/controle_trocas/log-changeover-dark.png" alt="Log changeover screen, dark theme: seven numbered steps on the left, summary of the entry and latest entries on the right" loading="lazy" width="1600" height="790" /></picture>
+              <picture class="light"><source type="image/webp" srcset="../images/controle_trocas/log-changeover-light.webp" /><img src="../images/controle_trocas/log-changeover-light.png" alt="Log changeover screen, light theme: seven numbered steps on the left, summary of the entry and latest entries on the right" loading="lazy" width="1600" height="795" /></picture>
+              <figcaption>Seven-step changeover entry with live summary.</figcaption>
+            </figure>
+          </div>
+
+          <div class="feature feature--text">
+            <div>
+              <h3>Implicit equipment registry</h3>
+              <p>Each part has its own ID; the physical number stamped on it can repeat. New numbers are registered automatically when first used; repeated numbers prompt the operator to choose which part they mean. The registry has no screen of its own: it works inside the changeover and setup screens.</p>
+            </div>
+          </div>
+
+          <div class="feature">
+            <div>
+              <h3>Reserve stock</h3>
+              <p>One card per machine with the reserve of each equipment type, classified as Ideal, Alert, Critical or No parameter according to central parameters per machine model. Counting is in parts; H-28 molds are controlled in pairs and accept half a pair.</p>
+            </div>
+            <figure class="shot theme-shot">
+              <picture class="dark"><source type="image/webp" srcset="../images/controle_trocas/reserve-stock-dark.webp" /><img src="../images/controle_trocas/reserve-stock-dark.png" alt="Reserve stock screen, dark theme: Ideal, Alert, Critical and No parameter counters, process filters and a machine card with balances and thresholds per equipment type" loading="lazy" width="1600" height="704" /></picture>
+              <picture class="light"><source type="image/webp" srcset="../images/controle_trocas/reserve-stock-light.webp" /><img src="../images/controle_trocas/reserve-stock-light.png" alt="Reserve stock screen, light theme: Ideal, Alert, Critical and No parameter counters, process filters and a machine card with balances and thresholds per equipment type" loading="lazy" width="1600" height="789" /></picture>
+              <figcaption>Reserve balance per machine with status thresholds.</figcaption>
+            </figure>
+          </div>
+
+          <div class="feature">
+            <div>
+              <h3>Inventory: manufacturing and maintenance together</h3>
+              <p>Parts in reserve, in maintenance and in stock, per machine. A changeover automatically debits the reserve and sends the removed part to maintenance. The Maintenance role completes repairs, sends parts back to manufacturing and makes inventory adjustments with a mandatory reason. Every movement goes to an auditable history.</p>
+            </div>
+            <figure class="shot theme-shot">
+              <picture class="dark"><source type="image/webp" srcset="../images/controle_trocas/inventory-dark.webp" /><img src="../images/controle_trocas/inventory-dark.png" alt="Inventory screen, dark theme: parts in reserve, in maintenance and in stock, a machine card with balances per equipment type, and a recent movements table" loading="lazy" width="1600" height="793" /></picture>
+              <picture class="light"><source type="image/webp" srcset="../images/controle_trocas/inventory-light.webp" /><img src="../images/controle_trocas/inventory-light.png" alt="Inventory screen, light theme: parts in reserve, in maintenance and in stock, a machine card with balances per equipment type, and a recent movements table" loading="lazy" width="1600" height="792" /></picture>
+              <figcaption>Inventory with the movement history (rows blanked).</figcaption>
+            </figure>
+          </div>
+
+          <div class="feature">
+            <div>
+              <h3>Alert monitor</h3>
+              <p>Cards of changeovers in near real time, refreshed every minute. Each new changeover appears full screen, for a monitor on the factory floor, with optional sound.</p>
+            </div>
+            <figure class="shot theme-shot">
+              <picture class="dark"><source type="image/webp" srcset="../images/controle_trocas/alert-monitor-dark.webp" /><img src="../images/controle_trocas/alert-monitor-dark.png" alt="Alert monitor, dark theme: live indicator, process filters, sound toggle and three changeover cards with installed and removed equipment" loading="lazy" width="1600" height="788" /></picture>
+              <picture class="light"><source type="image/webp" srcset="../images/controle_trocas/alert-monitor-light.webp" /><img src="../images/controle_trocas/alert-monitor-light.png" alt="Alert monitor, light theme: live indicator, process filters, sound toggle and three changeover cards with installed and removed equipment" loading="lazy" width="1600" height="789" /></picture>
+              <figcaption>Alert monitor: one card per changeover, polled every minute.</figcaption>
+            </figure>
+          </div>
+
+          <div class="feature">
+            <div>
+              <h3>Run time and useful life</h3>
+              <p>Hours in machine for each section, compared with the reference useful life: within useful life, near the limit from 80%, or above the limit, with history per position.</p>
+            </div>
+            <figure class="shot theme-shot">
+              <picture class="dark"><source type="image/webp" srcset="../images/controle_trocas/run-time-dark.webp" /><img src="../images/controle_trocas/run-time-dark.png" alt="Run time screen, dark theme: counters for within, near and above useful life, filters by process, line, machine and equipment, and section cards with hours in machine and a progress bar" loading="lazy" width="1600" height="787" /></picture>
+              <picture class="light"><source type="image/webp" srcset="../images/controle_trocas/run-time-light.webp" /><img src="../images/controle_trocas/run-time-light.png" alt="Run time screen, light theme: counters for within, near and above useful life, filters by process, line, machine and equipment, and section cards with hours in machine and a progress bar" loading="lazy" width="1600" height="789" /></picture>
+              <figcaption>Run time per section against the reference useful life.</figcaption>
+            </figure>
+          </div>
+
+          <div class="feature feature--text">
+            <div>
+              <h3>Access control and header indicators</h3>
+              <p>Corporate Microsoft sign-in and access granted per process and line with four roles: Viewer, Operator, Maintenance and Administrator, managed inside the application. The header on every screen shows changeovers in the last 24 h, critical reserves and equipment above useful life. Light/dark theme and a responsive layout for desktop, tablet and phone.</p>
+            </div>
           </div>
         </section>
-      </article>
 
-      <aside class="side-card">
-        <h2>Tools</h2>
-        <ul class="tags"><li>Python</li><li>Flask</li><li>HTML/CSS/JS</li><li>Microsoft Fabric</li><li>Lakehouse (Delta)</li><li>SQL</li><li>delta-rs</li><li>pyodbc</li><li>Entra ID (MSAL)</li><li>pytest</li><li>SQLite</li></ul>
-        <h2>Context</h2>
-        <p>Built for an industrial company. Screenshots use fictional data from the app's demo mode.</p>
-      </aside>
+        <section class="cs-section" id="highlights">
+          <h2>Technical highlights</h2>
+          <p>Snippets are simplified and use generic names.</p>
+
+          <div class="highlight">
+            <h3>Repository pattern: SQLite ↔ Fabric by environment variable</h3>
+            <p>All business rules (recording a changeover, balances, run-time cycles, useful-life status) live in a base repository. Two implementations provide storage: SQLite for development and demos, Fabric for production. Switching is one environment variable, and no rule changes.</p>
+<pre><code>class BaseRepository(ABC):
+    # business rules, shared
+    def record_changeover(self, data, now=None): ...
+    def start_setup(self, data, now=None): ...
+
+    @abstractmethod
+    def _append(self, table, rows): ...
+    @abstractmethod
+    def _query(self, sql, params=()): ...
+
+class SqliteRepository(BaseRepository): ...   # local file, same rules
+class FabricRepository(BaseRepository): ...   # Delta Tables on OneLake
+
+def get_repository():
+    return FabricRepository() if DATA_BACKEND == "fabric" else SqliteRepository()</code></pre>
+          </div>
+
+          <div class="highlight">
+            <h3>Delta read cache: a round of screens from 3.6–5.3 s to about 0.03 s</h3>
+            <p>Reading Delta Tables over the network on every request was the bottleneck. The Fabric repository keeps a per-table cache with a configurable TTL, shared between open screens, refreshed incrementally from the Delta table and invalidated on every write. A full round of the screens dropped from 3.6–5.3 seconds to roughly 0.03 seconds.</p>
+          </div>
+
+          <div class="highlight">
+            <h3>Writing where the SQL endpoint cannot</h3>
+            <p>The Lakehouse SQL analytics endpoint is read-only. Writes go straight to the Delta Tables on OneLake with <code>deltalake</code> (delta-rs) and PyArrow, with the table protocol pinned so the Rust writer stays compatible. Reads can use either the Delta Tables (cached) or the SQL endpoint through pyodbc with a Service Principal token.</p>
+          </div>
+
+          <div class="highlight">
+            <h3>Additive, idempotent schema migration</h3>
+            <p>A migration tool reports what it would change before applying, only adds columns and tables (never drops data), and can be re-run safely. It also back-filled the stock history from changeovers recorded before the inventory module existed.</p>
+          </div>
+
+          <div class="highlight">
+            <h3>Equipment identity by ID, not by stamped number</h3>
+            <p>Physical numbers repeat across parts and even within the same type. Every part gets a UUID, and changeovers, setups and run-time cycles reference the ID. The number stays as a human label; ambiguity is resolved by asking the operator.</p>
+          </div>
+
+          <div class="highlight">
+            <h3>Central parameters in one file</h3>
+            <p>Processes, lines, machine types, sections, equipment positions, useful life and reserve thresholds are defined once in <code>config</code> and served to the front end. Reserve rules vary by machine model (H-28 with 12 or 18 sections), and processes without confirmed parameters are marked as provisional instead of guessing.</p>
+          </div>
+
+          <div class="highlight">
+            <h3>Security</h3>
+            <p>Sign-in with Microsoft Entra ID (OpenID Connect, authorization code with PKCE) through MSAL on the server. The session is a signed, HttpOnly, SameSite=Lax cookie, Secure under HTTPS. Secrets live only in environment variables, outside the deployment package. Authorization is checked on the server on every route; the API even trims the parameter list so the UI only offers lines the user may see. Everything displayed in the front end is escaped. Roles separate duties (Operator ≠ Maintenance), and Row-Level Security on the Fabric SQL endpoint applies the same permission table to Power BI and SQL users.</p>
+<pre><code>def permits(user, process, line=None, role="VIEWER"):
+    return any(
+        role_satisfies(scope.role, role)
+        and scope.process in (process, "*")
+        and (line is None or scope.line in (line, "*"))
+        for scope in user.scopes
+    )
+
+@app.post("/api/changeovers")
+def create_changeover():
+    data = validate_changeover(request.json)        # against central parameters
+    current_user().require(data.process, data.line, "OPERATOR")
+    return jsonify(repo.record_changeover(data))</code></pre>
+          </div>
+        </section>
+
+        <section class="cs-section" id="challenges">
+          <h2>Challenges and how I solved them</h2>
+          <div class="challenge">
+            <div><h4>Challenge</h4><p>Every screen read several Delta Tables over the network; a round of screens took 3.6–5.3 s.</p></div>
+            <div><h4>Solution</h4><p>A per-table read cache with TTL, incremental refresh and invalidation on write. The same round now takes about 0.03 s.</p></div>
+          </div>
+          <div class="challenge">
+            <div><h4>Challenge</h4><p>The Fabric SQL endpoint is read-only, so the app could not write through SQL.</p></div>
+            <div><h4>Solution</h4><p>Writes go to the Delta Tables on OneLake with deltalake and PyArrow; reads use cached Delta or the SQL endpoint.</p></div>
+          </div>
+          <div class="challenge">
+            <div><h4>Challenge</h4><p>The model evolved while real data was already in the Lakehouse.</p></div>
+            <div><h4>Solution</h4><p>An additive, idempotent migration tool that reports before applying and never deletes data, including retroactive stock accounting.</p></div>
+          </div>
+          <div class="challenge">
+            <div><h4>Challenge</h4><p>Stamped equipment numbers repeat, so "mold 22" could mean two different parts.</p></div>
+            <div><h4>Solution</h4><p>Identity by UUID with an implicit registry: new numbers are registered automatically, repeated ones ask the operator to choose.</p></div>
+          </div>
+          <div class="challenge">
+            <div><h4>Challenge</h4><p>Reserve rules differ by machine model and some processes had no agreed parameters yet.</p></div>
+            <div><h4>Solution</h4><p>Central parameters per model, counting in parts (pairs for H-28 molds, half pairs accepted), and an explicit "no parameter" status instead of silent defaults.</p></div>
+          </div>
+          <div class="challenge">
+            <div><h4>Challenge</h4><p>Production and maintenance tracked the same parts separately.</p></div>
+            <div><h4>Solution</h4><p>One lifecycle (reserve → machine → maintenance → stock → reserve) with automatic moves on changeover, a Maintenance role for the rest, and a full movement history.</p></div>
+          </div>
+          <div class="challenge">
+            <div><h4>Challenge</h4><p>Developing and testing without a Fabric connection.</p></div>
+            <div><h4>Solution</h4><p>The SQLite repository with the same interface, plus tests of the Fabric repository against local Delta Tables.</p></div>
+          </div>
+        </section>
+
+        <section class="cs-section" id="process">
+          <h2>Development process</h2>
+          <p>Iterative, guided by real use on the factory floor. Each step was validated with automated tests and browser-based interface tests. Alongside the application I ran the server's infrastructure diagnosis (CPU/WMI) and the hardware sizing.</p>
+          <ol class="tl">
+            <li><h4>Setup and changeovers</h4><p>Core model: machine setups and changeover entries.</p></li>
+            <li><h4>Equipment identity by ID</h4><p>Implicit registry; stamped numbers become labels.</p></li>
+            <li><h4>Reserve per machine with central parameters</h4><p>Status thresholds by machine model.</p></li>
+            <li><h4>Corporate sign-in and access control</h4><p>Entra ID, roles per process and line, managed in the app.</p></li>
+            <li><h4>Fabric integration</h4><p>Fabric repository: Delta writes, SQL endpoint reads, RLS scripts.</p></li>
+            <li><h4>Server deployment with HTTPS</h4><p>PowerShell installer: prerequisites, virtual environment, certificate from the Windows store, scheduled task, health check.</p></li>
+            <li><h4>Performance</h4><p>Per-table read cache (3.6–5.3 s → ~0.03 s).</p></li>
+            <li><h4>Manufacturing and maintenance integration</h4><p>Inventory module and stock movement history.</p></li>
+            <li><h4>Visual refinement</h4><p>Cards, light/dark theme, full-screen alerts.</p></li>
+          </ol>
+        </section>
+
+        <section class="cs-section" id="results">
+          <h2>Results</h2>
+          <ul class="results">
+            <li>A single, centralized record of changeovers, the article in production and reserve balances, where there was none.</li>
+            <li>The factory can see what is in each machine position, how long each part has run, and which reserves are critical.</li>
+            <li>Production and maintenance share one lifecycle for parts, with an auditable movement history.</li>
+            <li>Data lands in the Lakehouse and is ready for Power BI, with row-level security.</li>
+            <li>91 automated tests and end-to-end browser tests back every change.</li>
+          </ul>
+        </section>
+
+        <section class="cs-section" id="tools">
+          <h2>Tools</h2>
+          <h3>Back end</h3>
+          <ul class="badges"><li>Python 3.12</li><li>Flask (REST API, also serves the front end)</li><li>Waitress</li><li>Cheroot (HTTPS in-app)</li></ul>
+          <h3>Front end</h3>
+          <ul class="badges"><li>HTML5</li><li>CSS3 (design tokens, light/dark)</li><li>JavaScript ES modules</li><li>Inter</li></ul>
+          <h3>Identity and data</h3>
+          <ul class="badges"><li>Microsoft Entra ID (OIDC + PKCE, MSAL)</li><li>Microsoft Fabric Lakehouse</li><li>Delta Tables (deltalake / delta-rs, PyArrow)</li><li>SQL analytics endpoint (pyodbc, ODBC Driver 18)</li><li>azure-identity (Service Principal)</li><li>Row-Level Security</li><li>SQLite (dev / demo)</li><li>Power BI</li></ul>
+          <h3>Delivery and quality</h3>
+          <ul class="badges"><li>PowerShell installer (Windows Server)</li><li>Scheduled task + health check</li><li>unittest (91 tests)</li><li>Playwright E2E (Microsoft Edge)</li></ul>
+        </section>
+
+        <nav class="pager" aria-label="Project navigation">
+          <a class="prev" href="it-service-desk-dashboard.html"><span>← Previous</span><strong>IT Service Desk Dashboard</strong></a>
+          <a class="next" href="spotify-music-recommender.html"><span>Next →</span><strong>Spotify Music Recommender</strong></a>
+        </nav>
+      </article>
     </div>
   </main>
 
   <footer class="site-footer">
-    <div class="container"><p>© 2026 Felipe Nunes Reis</p></div>
+    <div class="container">
+      <span>© 2026 Felipe Nunes Reis</span>
+      <span>Screenshots are redacted; no company data is shown.</span>
+    </div>
   </footer>
 
   <script src="../js/script.js"></script>
