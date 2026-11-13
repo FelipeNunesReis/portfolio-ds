@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>IT Service Desk Dashboard — Case study — Felipe Nunes Reis</title>
+  <meta name="description" content="Case study: a Power BI dashboard on GLPI help desk data showing IT ticket volume, backlog and SLA across support, SAP systems and infrastructure, refreshed hourly." />
+  <meta name="theme-color" content="#0e0e11" />
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-grid">
+      <a href="../index.html" class="brand">Felipe <span>Nunes Reis</span></a>
+      <nav class="nav" aria-label="Main">
+        <a href="../index.html">Home</a>
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#projects" aria-current="true">Projects</a>
+        <a href="../index.html#skills">Skills</a>
+        <a href="../index.html#experience">Experience</a>
+        <a href="../index.html#contact">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <a class="btn ghost" href="https://www.linkedin.com/in/felipe-nunes-reis-b3a3061b6/" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn ghost" href="https://github.com/FelipeNunesReis" target="_blank" rel="noopener">GitHub</a>
+        <button class="icon-btn theme-toggle" type="button" aria-label="Switch theme">
+          <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+          <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        </button>
+        <button class="icon-btn menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </div>
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile">
+      <a href="../index.html">Home</a>
+      <a href="../index.html#about">About</a>
+      <a href="../index.html#projects">Projects</a>
+      <a href="../index.html#skills">Skills</a>
+      <a href="../index.html#experience">Experience</a>
+      <a href="../index.html#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="main" class="container">
+    <section class="cs-hero">
+      <a class="back" href="../index.html#projects"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"/></svg> All projects</a>
+      <span class="eyebrow">Power BI · Case study 3 of 6</span>
+      <h1>IT Service Desk Dashboard</h1>
+      <p class="lead">A Power BI dashboard on GLPI help desk data that gives the IT team of an industrial company one view of ticket volume, backlog and SLA across support, SAP systems and infrastructure, refreshed every hour.</p>
+      <ul class="badges"><li>Power BI</li><li>DAX</li><li>Power Query</li><li>GLPI</li></ul>
+      <dl class="cs-meta">
+        <div><dt>My role</dt><dd>Designed and built end to end</dd></div>
+        <div><dt>Built for</dt><dd>IT team of an industrial company</dd></div>
+        <div><dt>Scope</dt><dd>3 report pages, hourly refresh</dd></div>
+        <div><dt>Source</dt><dd>GLPI help desk</dd></div>
+      </dl>
+    </section>
+
+    <div class="cs-layout">
+      <nav class="cs-toc" aria-label="On this page">
+        <ol>
+          <li><a href="#overview">Overview</a></li>
+          <li><a href="#context">Context and problem</a></li>
+          <li><a href="#role">My role</a></li>
+          <li><a href="#architecture">Architecture</a></li>
+          <li><a href="#features">Report pages</a></li>
+          <li><a href="#highlights">Technical highlights</a></li>
+          <li><a href="#challenges">Challenges</a></li>
+          <li><a href="#results">Results</a></li>
+          <li><a href="#tools">Tools</a></li>
+        </ol>
+      </nav>
+
+      <article>
+        <section class="cs-section" id="overview">
+          <h2>Overview</h2>
+          <p>The IT team handles tickets for end-user support, SAP systems and infrastructure in GLPI. This dashboard reads that data, models it in Power BI and presents three pages: an overview of volume and trend, a page for SAP tickets with SLA compliance and response time, and a page for infrastructure tickets by category and requester. It refreshes every hour, so the team manages the day from the dashboard rather than from GLPI lists.</p>
+        </section>
+
+        <section class="cs-section" id="context">
+          <h2>Context and problem</h2>
+          <p>There was no visibility into IT ticket volume, backlog and SLA across the three areas. Questions such as "how many tickets are open right now", "are we meeting the SLA on SAP tickets" or "which categories generate most infrastructure work" required manual exports from GLPI.</p>
+        </section>
+
+        <section class="cs-section" id="role">
+          <h2>My role</h2>
+          <p>I built the whole report: the Power Query extraction and cleaning from GLPI, the data model and DAX measures, the three pages and their visuals, and the hourly refresh.</p>
+        </section>
+
+        <section class="cs-section" id="architecture">
+          <h2>Architecture</h2>
+          <figure class="diagram">
+            <svg viewBox="0 0 960 240" role="img" aria-labelledby="dgi-title dgi-desc">
+              <title id="dgi-title">IT Service Desk Dashboard data flow</title>
+              <desc id="dgi-desc">GLPI help desk data is extracted and cleaned in Power Query, loaded into a Power BI data model with DAX measures, and presented in three report pages. The dataset refreshes every hour.</desc>
+              <defs><marker id="dgi-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5 0 10z" fill="var(--muted)"/></marker></defs>
+              <g font-size="14" font-family="inherit">
+                <rect x="20" y="60" width="190" height="110" rx="12" fill="var(--panel-2)" stroke="var(--line-strong)"/>
+                <text x="115" y="94" text-anchor="middle" fill="var(--text)" font-weight="600">GLPI help desk</text>
+                <text x="115" y="118" text-anchor="middle" fill="var(--muted)" font-size="13">tickets, categories,</text>
+                <text x="115" y="138" text-anchor="middle" fill="var(--muted)" font-size="13">technicians, requesters</text>
+
+                <rect x="270" y="60" width="190" height="110" rx="12" fill="var(--panel-2)" stroke="var(--line-strong)"/>
+                <text x="365" y="94" text-anchor="middle" fill="var(--text)" font-weight="600">Power Query</text>
+                <text x="365" y="118" text-anchor="middle" fill="var(--muted)" font-size="13">extract, clean, type,</text>
+                <text x="365" y="138" text-anchor="middle" fill="var(--muted)" font-size="13">split by area</text>
+
+                <rect x="520" y="60" width="190" height="110" rx="12" fill="var(--panel-2)" stroke="var(--line-strong)"/>
+                <text x="615" y="94" text-anchor="middle" fill="var(--text)" font-weight="600">Data model</text>
+                <text x="615" y="118" text-anchor="middle" fill="var(--muted)" font-size="13">date table, relationships,</text>
+                <text x="615" y="138" text-anchor="middle" fill="var(--muted)" font-size="13">DAX measures</text>
+
+                <rect x="770" y="40" width="170" height="150" rx="12" fill="var(--accent-soft)" stroke="var(--accent)"/>
+                <text x="855" y="72" text-anchor="middle" fill="var(--text)" font-weight="700">Power BI report</text>
+                <text x="855" y="100" text-anchor="middle" fill="var(--text-2)" font-size="13">Overview</text>
+                <text x="855" y="122" text-anchor="middle" fill="var(--text-2)" font-size="13">SAP systems</text>
+                <text x="855" y="144" text-anchor="middle" fill="var(--text-2)" font-size="13">Infrastructure</text>
+                <text x="855" y="172" text-anchor="middle" fill="var(--muted)" font-size="12">refresh every hour</text>
+
+                <g stroke="var(--muted)" stroke-width="2" fill="none" marker-end="url(#dgi-arrow)">
+                  <path d="M210 115H268"/><path d="M460 115H518"/><path d="M710 115H768"/>
+                </g>
+                <text x="480" y="220" text-anchor="middle" fill="var(--muted)" font-size="12.5">Scheduled refresh: GLPI → Power Query → model → report, every hour</text>
+              </g>
+            </svg>
+            <figcaption>A standard Power BI pipeline: the value is in the model and the three pages built on it.</figcaption>
+          </figure>
+        </section>
+
+        <section class="cs-section" id="features">
+          <h2>Report pages</h2>
+          <p class="note">Names, logo and ticket details are blurred in the screenshots. Report labels are in Portuguese.</p>
+
+          <div class="feature">
+            <div>
+              <h3>Overview</h3>
+              <p>Open, closed and total tickets; the month-by-month accumulated trend; the open/closed split; tickets per technician; and a detail table of tickets with priority, status, category and dates.</p>
+            </div>
+            <figure class="shot">
+              <a href="../images/glpi/glpi-1-overview.webp" target="_blank" rel="noopener">
+                <picture><source type="image/webp" srcset="../images/glpi/glpi-1-overview.webp" /><img src="../images/glpi/glpi-1-overview.png" alt="Overview page: total, open and closed tickets, monthly accumulated bar chart, open versus closed donut, tickets per technician and a detail table" loading="lazy" width="1600" height="913" /></picture>
+              </a>
+              <figcaption>Overview page.</figcaption>
+            </figure>
+          </div>
+
+          <div class="feature">
+            <div>
+              <h3>SAP systems</h3>
+              <p>Open tickets by requester; tickets in progress, pending and new; created vs. closed as a gauge; tickets by SAP module; median days to first response; tickets inside and outside the SLA; and the monthly series of created and closed tickets.</p>
+            </div>
+            <figure class="shot">
+              <a href="../images/glpi/glpi-2-sap-systems.webp" target="_blank" rel="noopener">
+                <picture><source type="image/webp" srcset="../images/glpi/glpi-2-sap-systems.webp" /><img src="../images/glpi/glpi-2-sap-systems.png" alt="SAP systems page: open tickets by requester, status cards, created versus closed gauge, tickets by SAP module treemap, SLA cards, median days to first response and a monthly created versus closed chart" loading="lazy" width="1600" height="913" /></picture>
+              </a>
+              <figcaption>SAP systems page with SLA and first-response indicators.</figcaption>
+            </figure>
+          </div>
+
+          <div class="feature">
+            <div>
+              <h3>Infrastructure</h3>
+              <p>Total, open and closed tickets; tickets by category as a treemap; top requesters; closed tickets per month; and a detail table.</p>
+            </div>
+            <figure class="shot">
+              <a href="../images/glpi/glpi-3-infrastructure.webp" target="_blank" rel="noopener">
+                <picture><source type="image/webp" srcset="../images/glpi/glpi-3-infrastructure.webp" /><img src="../images/glpi/glpi-3-infrastructure.png" alt="Infrastructure page: ticket totals, tickets by category treemap, top requesters bar chart, closed tickets per month area chart and a detail table" loading="lazy" width="1600" height="913" /></picture>
+              </a>
+              <figcaption>Infrastructure page.</figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <section class="cs-section" id="highlights">
+          <h2>Technical highlights</h2>
+          <div class="highlight">
+            <h3>One model, three audiences</h3>
+            <p>Tickets are classified by area in Power Query so each page filters the same model instead of maintaining three datasets. Measures such as open, closed, created vs. closed, SLA compliance and median first-response time are written once in DAX and reused across pages.</p>
+          </div>
+          <div class="highlight">
+            <h3>Hourly refresh</h3>
+            <p>The dataset refreshes every hour, which is enough for the team to manage the day's backlog from the dashboard, and the refresh time is shown on the page.</p>
+          </div>
+          <div class="highlight">
+            <h3>Side navigation and consistent layout</h3>
+            <p>A fixed side bar switches between pages; cards, charts and the detail table keep the same positions across pages, so the eye knows where to look.</p>
+          </div>
+        </section>
+
+        <section class="cs-section" id="challenges">
+          <h2>Challenges and how I solved them</h2>
+          <div class="challenge">
+            <div><h4>Challenge</h4><p>Three areas with different questions (volume, SLA, categories) in one report.</p></div>
+            <div><h4>Solution</h4><p>One shared model classified by area, one page per area, shared measures.</p></div>
+          </div>
+          <div class="challenge">
+            <div><h4>Challenge</h4><p>Ticket data needed cleaning before it could be trusted (types, categories, dates).</p></div>
+            <div><h4>Solution</h4><p>All cleaning in Power Query steps, so the refresh repeats it automatically every hour.</p></div>
+          </div>
+        </section>
+
+        <section class="cs-section" id="results">
+          <h2>Results</h2>
+          <ul class="results">
+            <li>One view of ticket volume, backlog and SLA for the IT team.</li>
+            <li>SLA compliance and first-response time on SAP tickets became visible.</li>
+            <li>No more manual exports from GLPI to answer routine questions.</li>
+          </ul>
+        </section>
+
+        <section class="cs-section" id="tools">
+          <h2>Tools</h2>
+          <ul class="badges"><li>Power BI</li><li>DAX</li><li>Power Query</li><li>GLPI</li></ul>
+        </section>
+
+        <nav class="pager" aria-label="Project navigation">
+          <a class="prev" href="quality-sampling-report.html"><span>← Previous</span><strong>Quality Sampling Report</strong></a>
+          <a class="next" href="equipment-changeover-tracker.html"><span>Next →</span><strong>Equipment Changeover Tracker</strong></a>
+        </nav>
+      </article>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <span>© 2026 Felipe Nunes Reis</span>
+      <span>Screenshots are anonymized; no personal data is shown.</span>
+    </div>
+  </footer>
+
+  <script src="../js/script.js"></script>
+</body>
+</html>

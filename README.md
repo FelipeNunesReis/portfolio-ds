@@ -1,25 +1,22 @@
-# Portfólio - Felipe Nunes Reis (deploy-ready)
+# Portfolio — Felipe Nunes Reis
 
-## O que tem aqui
-- Site estático pronto para deploy (index.html, css, js)
-- Tema Dark/Light com persistência (localStorage)
-- Animações extras via Lottie (placeholder incluído)
-- CI: Workflow GitHub Actions para publicar no GitHub Pages
+Personal portfolio: https://felipenunesreis.github.io/portfolio-ds/
 
-## Como usar localmente
-1. Coloque sua foto em `images/fotoportfolio.png` (já deve estar presente se você fez upload).
-2. Abra `index.html` no VSCode (Live Server) ou no navegador.
+Static site (HTML, CSS and vanilla JavaScript), published with GitHub Pages from the `main` branch.
 
-## Deploy para GitHub Pages (automático via Actions)
-1. Crie um repositório no GitHub.
-2. Faça `git init` / `git add .` / `git commit -m "initial"`
-3. `git branch -M main`
-4. `git remote add origin https://github.com/SEU_USUARIO/SEU_REPO.git`
-5. `git push -u origin main`
+## Structure
+- `index.html`: home page (about, experience, projects, skills, education, contact)
+- `projects/`: one page per project
+- `css/style.css`: styles
+- `js/script.js`: reveal animations and mobile menu
+- `images/`: photo and project screenshots
+- `assets/`: CVs (English and Portuguese), favicon and icons
 
-Ao enviar para a branch `main`, o workflow `.github/workflows/gh-pages.yml` publicará o conteúdo do branch `main` no GitHub Pages automaticamente.
+## Run locally
+Open `index.html` in a browser, or serve the folder:
 
-## Notas
-- O arquivo do CV foi copiado para `assets/CV_Felipe_Nunes_Reis.pdf`.
-- Lottie: coloque JSONs de animações em `assets/` e referencie nos elementos com `data-lottie="assets/seu-lottie.json"`.
+```bash
+python -m http.server 8000
+```
 
+Then go to http://localhost:8000.
