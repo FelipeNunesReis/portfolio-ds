@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Equipment Changeover Tracker — Felipe Nunes Reis</title>
+  <meta name="description" content="A Python and Microsoft Fabric web app to record equipment changeovers, track spare stock and monitor useful life." />
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-grid">
+      <a href="../index.html" class="brand-link">Felipe <span>Nunes Reis</span></a>
+      <nav class="nav" aria-label="Main">
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#experience">Experience</a>
+        <a href="../index.html#projects">Projects</a>
+        <a href="../index.html#skills">Skills</a>
+        <a href="../index.html#contact">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <a href="https://www.linkedin.com/in/felipe-nunes-reis-b3a3061b6/" class="ghost-btn" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/FelipeNunesReis" class="ghost-btn" target="_blank" rel="noopener">GitHub</a>
+        <button id="mobileMenuBtn" class="mobile-menu-btn" aria-label="Open menu" aria-expanded="false">&#9776;</button>
+      </div>
+    </div>
+    <nav class="nav mobile-nav" aria-label="Mobile">
+      <a href="../index.html#about">About</a>
+      <a href="../index.html#experience">Experience</a>
+      <a href="../index.html#projects">Projects</a>
+      <a href="../index.html#skills">Skills</a>
+      <a href="../index.html#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="project-hero">
+      <a class="back-link" href="../index.html#projects">← Back to projects</a>
+      <p class="project-kicker">Python · Flask · Microsoft Fabric</p>
+      <h1>Equipment Changeover Tracker</h1>
+      <p class="lead">A web app to record equipment changeovers on production lines, track spare stock and monitor each part's useful life, built for an industrial company.</p>
+    </section>
+
+    <div class="project-layout">
+      <article>
+        <section class="project-section">
+          <h2>Problem</h2>
+          <p>Equipment changes on production lines (molds and other machine parts), spare stock and wear were tracked manually. There was no reliable history and no early warning before spare stock or a part's useful life ran out.</p>
+        </section>
+
+        <section class="project-section">
+          <h2>Solution</h2>
+          <p>A web app for the shop floor with a Python (Flask) API and a lightweight HTML/CSS/JavaScript front end. Data lives in a Microsoft Fabric Lakehouse: the app reads through the SQL analytics endpoint and writes directly to Delta tables in OneLake. Users sign in with Microsoft Entra ID and only see the production lines they have access to.</p>
+        </section>
+
+        <section class="project-section">
+          <h2>Key features</h2>
+          <ul class="feature-list">
+            <li><strong>Machine setup:</strong> records the product running on each machine and a snapshot of the equipment in every position, comparing it with the previous setup (kept, changed, removed or divergent).</li>
+            <li><strong>Guided changeover entry:</strong> step-by-step flow (process → line → machine → section → equipment type → position → details) with a summary before saving.</li>
+            <li><strong>Spare stock balances</strong> per line and equipment type, with configurable critical and restock thresholds.</li>
+            <li><strong>Stock lifecycle:</strong> tracks parts moving between spare stock, machine, maintenance and storage, with a full movement history.</li>
+            <li><strong>Live activity monitor:</strong> a feed of changeovers from the shop floor, refreshed every minute, with optional sound alerts.</li>
+            <li><strong>Useful life tracking:</strong> hours each part has run compared with its reference life, flagged as within limit, near limit (80%) or over limit.</li>
+            <li><strong>Equipment registry</strong> with individual IDs, so parts that share the same number can still be told apart.</li>
+            <li><strong>Access management:</strong> admins grant roles (viewer, operator, maintenance, admin) by process and line. Row-level security in the Lakehouse applies the same rules to Power BI and SQL users.</li>
+            <li><strong>Demo mode:</strong> a local SQLite backend with the same business rules, used for development and testing.</li>
+          </ul>
+        </section>
+
+        <section class="project-section">
+          <h2>Impact</h2>
+          <ul class="feature-list">
+            <li>Designed to replace manual tracking of changeovers and spare stock with a single, auditable history.</li>
+            <li>Flags low spare stock and parts approaching the end of their useful life before they become a problem.</li>
+            <li>Keeps the data in the Lakehouse, ready for Power BI.</li>
+          </ul>
+        </section>
+
+        <section class="project-section">
+          <h2>Screenshots</h2>
+          <div class="gallery">
+            <figure><div class="placeholder"><strong>Screenshot coming soon</strong>Machine setup</div><figcaption>Machine setup and equipment snapshot</figcaption></figure>
+            <figure><div class="placeholder"><strong>Screenshot coming soon</strong>Changeover entry</div><figcaption>Guided changeover entry</figcaption></figure>
+            <figure><div class="placeholder"><strong>Screenshot coming soon</strong>Spare stock</div><figcaption>Spare stock balances and thresholds</figcaption></figure>
+            <figure><div class="placeholder"><strong>Screenshot coming soon</strong>Useful life</div><figcaption>Useful life tracking</figcaption></figure>
+          </div>
+        </section>
+      </article>
+
+      <aside class="side-card">
+        <h2>Tools</h2>
+        <ul class="tags"><li>Python</li><li>Flask</li><li>HTML/CSS/JS</li><li>Microsoft Fabric</li><li>Lakehouse (Delta)</li><li>SQL</li><li>delta-rs</li><li>pyodbc</li><li>Entra ID (MSAL)</li><li>pytest</li><li>SQLite</li></ul>
+        <h2>Context</h2>
+        <p>Built for an industrial company. Screenshots use fictional data from the app's demo mode.</p>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container"><p>© 2026 Felipe Nunes Reis</p></div>
+  </footer>
+
+  <script src="../js/script.js"></script>
+</body>
+</html>

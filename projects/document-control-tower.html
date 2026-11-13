@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Document Control Tower — Felipe Nunes Reis</title>
+  <meta name="description" content="A Power Apps portal with Power Automate workflows that centralizes department reports and presentations for leadership." />
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-grid">
+      <a href="../index.html" class="brand-link">Felipe <span>Nunes Reis</span></a>
+      <nav class="nav" aria-label="Main">
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#experience">Experience</a>
+        <a href="../index.html#projects">Projects</a>
+        <a href="../index.html#skills">Skills</a>
+        <a href="../index.html#contact">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <a href="https://www.linkedin.com/in/felipe-nunes-reis-b3a3061b6/" class="ghost-btn" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/FelipeNunesReis" class="ghost-btn" target="_blank" rel="noopener">GitHub</a>
+        <button id="mobileMenuBtn" class="mobile-menu-btn" aria-label="Open menu" aria-expanded="false">&#9776;</button>
+      </div>
+    </div>
+    <nav class="nav mobile-nav" aria-label="Mobile">
+      <a href="../index.html#about">About</a>
+      <a href="../index.html#experience">Experience</a>
+      <a href="../index.html#projects">Projects</a>
+      <a href="../index.html#skills">Skills</a>
+      <a href="../index.html#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="project-hero">
+      <a class="back-link" href="../index.html#projects">← Back to projects</a>
+      <p class="project-kicker">Power Apps · Power Automate · SharePoint</p>
+      <h1>Document Control Tower</h1>
+      <p class="lead">A central portal where leadership finds every department's reports and presentations, built for an industrial company.</p>
+    </section>
+
+    <div class="project-layout">
+      <article>
+        <section class="project-section">
+          <h2>Problem</h2>
+          <p>Executive reports, committee presentations and monthly documents from every department were scattered across folders and e-mails. There was no single place to find them and no control over who could publish.</p>
+        </section>
+
+        <section class="project-section">
+          <h2>Solution</h2>
+          <p>A Power Apps canvas app that organizes each department's documents by area, subject, year and month. Power Automate flows handle file copies and uploads, and SharePoint provides the storage and permissions.</p>
+        </section>
+
+        <section class="project-section">
+          <h2>Key features</h2>
+          <ul class="feature-list">
+            <li><strong>Department hub:</strong> navigation by area (daily performance, committees, finance, commercial, marketing, supply chain, industrial, HR, international unit and dashboards), with a year switcher to browse history.</li>
+            <li><strong>Monthly calendar view:</strong> each subject shows the months of the year; one click opens that period's report or presentation.</li>
+            <li><strong>Personal copy:</strong> a Power Automate flow copies the selected file to the user's own OneDrive, keeping the folder structure. The app tracks what each user has already copied, shows a visual indicator, handles errors and timeouts, and locks the screen while the flow runs.</li>
+            <li><strong>Role-based upload:</strong> only the owner of each area sees the publishing controls (area → subject → month/year → file → send), handled by an upload flow with confirmation.</li>
+            <li><strong>Dashboards page:</strong> links to each department's Power BI reports.</li>
+            <li><strong>Personalized header:</strong> user name and photo, plus links to the user manual and the governance policy.</li>
+            <li><strong>Responsive layout:</strong> scales between portrait and landscape, based on a Figma design.</li>
+          </ul>
+        </section>
+
+        <section class="project-section">
+          <h2>Impact</h2>
+          <ul class="feature-list">
+            <li>Centralized documents for leadership across departments in a single portal.</li>
+            <li>Replaced searching through folders and e-mails with navigation by area, subject and month.</li>
+            <li>Brought governance to publishing: only each area's owner can upload files.</li>
+          </ul>
+        </section>
+
+        <section class="project-section">
+          <h2>Screenshots</h2>
+          <div class="gallery">
+            <figure><div class="placeholder"><strong>Screenshot coming soon</strong>Home hub</div><figcaption>Home hub with department navigation</figcaption></figure>
+            <figure><div class="placeholder"><strong>Screenshot coming soon</strong>Monthly view</div><figcaption>Monthly calendar view for a subject</figcaption></figure>
+            <figure><div class="placeholder"><strong>Screenshot coming soon</strong>Upload</div><figcaption>Role-based upload screen</figcaption></figure>
+          </div>
+        </section>
+      </article>
+
+      <aside class="side-card">
+        <h2>Tools</h2>
+        <ul class="tags"><li>Power Apps</li><li>Power Fx</li><li>Power Automate</li><li>SharePoint</li><li>OneDrive</li><li>Power BI</li><li>Figma</li></ul>
+        <h2>Context</h2>
+        <p>Built for an industrial company. Screenshots use fictional data and a generic theme.</p>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container"><p>© 2026 Felipe Nunes Reis</p></div>
+  </footer>
+
+  <script src="../js/script.js"></script>
+</body>
+</html>

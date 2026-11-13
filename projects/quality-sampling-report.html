@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Quality Sampling Report — Felipe Nunes Reis</title>
+  <meta name="description" content="A responsive Power Apps canvas app for operators to log quality samples per machine cavity." />
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-grid">
+      <a href="../index.html" class="brand-link">Felipe <span>Nunes Reis</span></a>
+      <nav class="nav" aria-label="Main">
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#experience">Experience</a>
+        <a href="../index.html#projects">Projects</a>
+        <a href="../index.html#skills">Skills</a>
+        <a href="../index.html#contact">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <a href="https://www.linkedin.com/in/felipe-nunes-reis-b3a3061b6/" class="ghost-btn" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/FelipeNunesReis" class="ghost-btn" target="_blank" rel="noopener">GitHub</a>
+        <button id="mobileMenuBtn" class="mobile-menu-btn" aria-label="Open menu" aria-expanded="false">&#9776;</button>
+      </div>
+    </div>
+    <nav class="nav mobile-nav" aria-label="Mobile">
+      <a href="../index.html#about">About</a>
+      <a href="../index.html#experience">Experience</a>
+      <a href="../index.html#projects">Projects</a>
+      <a href="../index.html#skills">Skills</a>
+      <a href="../index.html#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="project-hero">
+      <a class="back-link" href="../index.html#projects">← Back to projects</a>
+      <p class="project-kicker">Power Apps · SharePoint</p>
+      <h1>Quality Sampling Report</h1>
+      <p class="lead">A responsive app for operators to log quality samples per machine cavity, built for an industrial company.</p>
+    </section>
+
+    <div class="project-layout">
+      <article>
+        <section class="project-section">
+          <h2>Problem</h2>
+          <p>Quality sampling on production lines was recorded manually. That was slow, error-prone and hard to track per shift.</p>
+        </section>
+
+        <section class="project-section">
+          <h2>Solution</h2>
+          <p>A responsive Power Apps canvas app (tablet, desktop and mobile) where operators log quality samples per machine cavity, saving structured records to SharePoint.</p>
+        </section>
+
+        <section class="project-section">
+          <h2>Key features</h2>
+          <ul class="feature-list">
+            <li><strong>Guided start screen:</strong> process → line → shift → product(s) → responsible person → date and time, with cascading filters and required-field validation.</li>
+            <li><strong>Shift history:</strong> samples already logged in the current shift appear as clickable time chips (including night shifts that cross midnight). Clicking one opens it read-only.</li>
+            <li><strong>Visual cavity grid:</strong> cavities are grouped by machine section (6 or 8 sections, inner and outer). Every cavity starts as "no defect", so the operator only taps the defective ones to add the defect type, mold number and notes.</li>
+            <li><strong>Smart defaults:</strong> each section inherits its product and mold numbers from the last sample on that line.</li>
+            <li><strong>Multiple products per sample:</strong> each section can be assigned to a product, color-coded, with alerts when a section changes.</li>
+            <li><strong>Data integrity:</strong> blocks duplicates (same line and date/time), requires every section to have a product and every product at least one section, and writes one record per product with error handling.</li>
+            <li><strong>Live counter</strong> of defective cavities.</li>
+          </ul>
+        </section>
+
+        <section class="project-section">
+          <h2>Impact</h2>
+          <ul class="feature-list">
+            <li>Replaced manual sampling records with a guided digital form.</li>
+            <li>Validation rules prevent duplicate and incomplete samples.</li>
+            <li>Produces structured records per shift, ready for reporting and analysis.</li>
+          </ul>
+        </section>
+
+        <section class="project-section">
+          <h2>Screenshots</h2>
+          <div class="gallery">
+            <figure><div class="placeholder"><strong>Screenshot coming soon</strong>Start screen</div><figcaption>Guided start screen with shift history chips</figcaption></figure>
+            <figure><div class="placeholder"><strong>Screenshot coming soon</strong>Cavity grid</div><figcaption>Cavity grid with defects marked</figcaption></figure>
+          </div>
+        </section>
+      </article>
+
+      <aside class="side-card">
+        <h2>Tools</h2>
+        <ul class="tags"><li>Power Apps</li><li>Power Fx</li><li>Collections</li><li>Responsive containers</li><li>SharePoint</li></ul>
+        <h2>Context</h2>
+        <p>Built for an industrial company. Screenshots use fictional data and a generic theme.</p>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container"><p>© 2026 Felipe Nunes Reis</p></div>
+  </footer>
+
+  <script src="../js/script.js"></script>
+</body>
+</html>

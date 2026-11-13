@@ -1,54 +1,45 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Felipe Nunes Reis — Portfólio</title>
+  <title>Felipe Nunes Reis — Portfolio</title>
+  <meta name="description" content="Portfolio of Felipe Nunes Reis, Systems Analyst. Power Platform apps, Power BI dashboards and data projects with SQL, Python and Microsoft Fabric." />
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="css/style.css" />
-  <meta name="description" content="Portfólio profissional — Felipe Nunes Reis. Analytics, RPA, IA, Python, SQL e Microsoft Fabric." />
 </head>
 <body>
 
   <!-- HEADER -->
   <header class="site-header">
     <div class="container header-grid">
-      <!-- Logo -->
       <a href="#" class="brand-link">Felipe <span>Nunes Reis</span></a>
 
-      <!-- Navegação principal -->
-      <nav class="nav">
-        <a id="navSobre" href="#sobre">Sobre</a>
-        <a id="navExperiencia" href="#experiencia">Experiência</a>
-        <a id="navProjetos" href="#projetos">Projetos</a>
-        <a id="navHabilidades" href="#habilidades">Habilidades</a>
-        <a id="navContato" href="#contato">Contato</a>
+      <nav class="nav" aria-label="Main">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
       </nav>
 
-      <!-- Ações e Language Switcher -->
       <div class="header-actions">
-        <a href="https://www.linkedin.com/in/felipe-nunes-reis-b3a3061b6/" class="ghost-btn">LinkedIn</a>
-        <a href="https://github.com/FelipeNunesReis" class="ghost-btn">GitHub</a>
-
-        <!-- Language Switcher -->
-        <div class="language-switcher">
-          <button class="lang-btn active" data-lang="pt">PT</button>
-          <button class="lang-btn" data-lang="es">ES</button>
-          <button class="lang-btn" data-lang="en">EN</button>
-        </div>
-
-        <!-- Mobile menu button -->
-        <button id="mobileMenuBtn" class="mobile-menu-btn">&#9776;</button>
+        <a href="https://www.linkedin.com/in/felipe-nunes-reis-b3a3061b6/" class="ghost-btn" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/FelipeNunesReis" class="ghost-btn" target="_blank" rel="noopener">GitHub</a>
+        <button id="mobileMenuBtn" class="mobile-menu-btn" aria-label="Open menu" aria-expanded="false">&#9776;</button>
       </div>
     </div>
 
-    <!-- Mobile Nav -->
-    <nav class="nav mobile-nav">
-      <a id="navSobreMobile" href="#sobre">Sobre</a>
-      <a id="navExperienciaMobile" href="#experiencia">Experiência</a>
-      <a id="navProjetosMobile" href="#projetos">Projetos</a>
-      <a id="navHabilidadesMobile" href="#habilidades">Habilidades</a>
-      <a id="navContatoMobile" href="#contato">Contato</a>
+    <nav class="nav mobile-nav" aria-label="Mobile">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+      <a href="https://www.linkedin.com/in/felipe-nunes-reis-b3a3061b6/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/FelipeNunesReis" target="_blank" rel="noopener">GitHub</a>
     </nav>
   </header>
 
@@ -57,24 +48,26 @@
     <section class="hero">
       <div class="container hero-grid">
         <div class="hero-left">
-          <h1 id="heroTitle" class="reveal">Felipe Nunes Reis</h1>
-          <p id="heroSubtitle" class="lead reveal-del">Analista de Sistemas | Data Analytics | Data Science |</p>
-          <p id="heroLead" class="muted reveal-del-2">
-            Profissional sênior em arquitetura e governança de dados, pipelines ETL/ELT, automações e soluções analíticas. Forte experiência em Python, SQL e Power BI.
+          <h1 class="reveal">Felipe Nunes Reis</h1>
+          <p class="tagline reveal-del">From the shop floor to data</p>
+          <p class="lead reveal-del">Systems Analyst | Power Platform · Power BI · Data</p>
+          <p class="muted reveal-del-2">
+            I build business apps, automations and dashboards for industrial operations. After years working on the production floor, I understand the processes I automate from the inside.
           </p>
           <div class="hero-cta reveal-del-3">
-            <a id="hireBtn" class="btn" href="#contato">Contrate-me</a>
-            <a id="downloadCV" class="btn outline" href="assets/CV_Felipe_Nunes_Reis.pdf" download>Baixar CV</a>
+            <a class="btn" href="#projects">View projects</a>
+            <a class="btn outline" href="assets/Felipe-Nunes-Reis-CV-EN.pdf" download>Download CV</a>
+            <a class="alt-link" href="assets/Felipe-Nunes-Reis-CV-PT.pdf" download hreflang="pt-BR">Português</a>
           </div>
           <ul class="meta-cards reveal-del-4">
-            <li><strong>Experiência</strong><span>Sênior / 4+ anos</span></li>
-            <li><strong>Stack</strong><span>Python · SQL · Power BI</span></li>
-            <li><strong>Foco</strong><span>Analytics · Data Science · IA</span></li>
+            <li><strong>Background</strong><span>10 years in industry</span></li>
+            <li><strong>Stack</strong><span>Power Platform · Power BI · SQL · Python</span></li>
+            <li><strong>Focus</strong><span>Automation and Analytics</span></li>
           </ul>
         </div>
         <aside class="hero-right reveal">
           <div class="photo-frame">
-            <img src="images/fotoportfolio.png" alt="Foto de Felipe Nunes Reis" id="profilePhoto" />
+            <img src="images/fotoportfolio.png" alt="Photo of Felipe Nunes Reis" />
             <div class="accent accent-top"></div>
             <div class="accent accent-bottom"></div>
           </div>
@@ -82,119 +75,220 @@
       </div>
     </section>
 
-    <!-- SOBRE -->
-    <section id="sobre" class="section">
+    <!-- ABOUT -->
+    <section id="about" class="section">
       <div class="container">
-        <h2 id="sobreTitle" class="section-title reveal">Sobre mim</h2>
-        <p id="sobreP1" class="reveal-del">
-          Ao longo da minha trajetória profissional, tive a oportunidade de atuar em diversas áreas dentro da empresa, iniciando pela manufatura e evoluindo de forma natural para o universo da tecnologia.
+        <h2 class="section-title reveal">About me</h2>
+        <p class="reveal-del">
+          I started at Nadir as a SENAI apprentice and spent the next years on the production floor as a mechanical fitter and machine setter: maintenance, failure analysis, operational reports and daily work in SAP.
         </p>
-        <p id="sobreP2" class="reveal-del-2">
-          Com o tempo, aprofundei-me em automações, dados e estratégias de digitalização, sempre com foco em otimizar processos e tornar operações complexas mais inteligentes e eficientes.
+        <p class="reveal-del-2">
+          That experience pushed me toward technology. In September 2025 I became a Systems Analyst, and now I build Power Apps, Power Automate flows and Power BI reports that replace manual work in operations, quality and management.
         </p>
-        <p id="sobreP3" class="reveal-del-3">
-          Sou um profissional sênior especializado em arquitetura, modelagem e governança de dados para Data Warehouse e Data Lake, com forte atuação na plataforma Microsoft Fabric.
+        <p class="reveal-del-3">
+          I'm finishing a Technologist Degree in Data Science with emphasis on AI, and I keep growing in SQL, Python, ETL and Microsoft Fabric.
         </p>
       </div>
     </section>
 
-    <!-- EXPERIÊNCIA -->
-    <section id="experiencia" class="section alt">
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section alt">
       <div class="container">
-        <h2 id="experienciaTitle" class="section-title reveal">Experiência</h2>
+        <h2 class="section-title reveal">Experience</h2>
         <div class="cards-grid">
           <article class="card reveal-card">
-            <h3 id="exp1Title">Analista de Sistemas — Nadir S/A</h3>
-            <span class="time">Set 2025 — Presente</span>
-            <p id="exp1Desc">Atuação sênior em arquitetura e governança de dados, pipelines analíticos, otimização de ETL/ELT com Python e automações RPA, garantindo alta disponibilidade e qualidade dos dados.</p>
+            <h3>Systems Analyst — Nadir S/A</h3>
+            <span class="time">Sep 2025 — Present</span>
+            <p>Business apps and automations with Power Apps, Power Automate and SharePoint, Power BI reports, and data pipelines with SQL, Python and Microsoft Fabric.</p>
           </article>
           <article class="card reveal-card">
-            <h3 id="exp2Title">Preparador de Máquinas H-28</h3>
-            <span class="time">Abr 2022 — Set 2025</span>
-            <p id="exp2Desc">Manutenções, análise de falhas, relatórios operacionais e uso diário de SAP para controle de estoque e processos internos.</p>
+            <h3>Machine Setter — Nadir S/A</h3>
+            <span class="time">Apr 2022 — Sep 2025</span>
+            <p>Machine setup and maintenance, failure analysis, operational reports and daily use of SAP for inventory and internal process control.</p>
           </article>
           <article class="card reveal-card">
-            <h3 id="exp3Title">Mecânico Ajustador C</h3>
-            <span class="time">Jul 2019 — Abr 2021</span>
-            <p id="exp3Desc">Melhorias em equipamentos com foco em redução de falhas e aumento de produtividade. Formação técnica pelo SENAI.</p>
+            <h3>Mechanical Fitter — Nadir S/A</h3>
+            <span class="time">Jul 2019 — Apr 2021</span>
+            <p>Equipment improvements focused on reducing failures and increasing productivity.</p>
+          </article>
+          <article class="card reveal-card">
+            <h3>SENAI Apprentice — Nadir S/A</h3>
+            <span class="time">Start of career</span>
+            <p>Technical training in mechanics through the SENAI apprenticeship program.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- PROJETOS -->
-    <section id="projetos" class="section">
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
       <div class="container">
-        <h2 id="projetosTitle" class="section-title reveal">Projetos / Exemplos</h2>
+        <h2 class="section-title reveal">Projects</h2>
+        <p class="section-intro reveal-del">Real-world apps and dashboards built for an industrial company, followed by academic projects. Screenshots use fictional or anonymized data.</p>
         <div class="projects-grid">
-          <!-- Projeto 1 -->
-          <div class="project reveal-card">
-            <h4 id="proj1Title">Recomendador de Música Spotify</h4>
-            <p id="proj1Desc">Projeto de sistema de recomendação de músicas utilizando machine learning.</p>
-            <button class="btn-glow open-project" data-project="recomendador">Ver Projeto</button>
-            <div class="project-detail" id="recomendador">
-              <h5>Detalhes do Projeto</h5>
-              <p id="proj1Obj"><strong>Objetivo:</strong> Melhorar a retenção do usuário e entregar recomendações relevantes.</p>
-              <div class="photo-frame">
-                <img src="images/carbon.png" alt="Recomendador de Música" />
-              </div>
-              <button class="btn-glow close-project">Fechar</button>
-            </div>
-          </div>
 
-          <!-- Projeto 2 -->
-          <div class="project reveal-card">
-            <h4 id="proj2Title">Dashboard — Fluxo de Caixa</h4>
-            <p id="proj2Desc">Dashboard financeiro em PNG com indicadores e visualizações.</p>
-            <button class="btn-glow open-project" data-project="fluxocaixa">Ver Projeto</button>
-            <div class="project-detail" id="fluxocaixa">
-              <h5>Detalhes do Projeto</h5>
-              <p id="proj2Obj"><strong>Objetivo:</strong> Entregar visibilidade financeira de forma ágil e automatizar a atualização dos relatórios.</p>
-              <div class="photo-frame">
-                <img src="images/projetopptx.png" alt="Dashboard Fluxo de Caixa" />
-              </div>
-              <button class="btn-glow close-project">Fechar</button>
+          <article class="project-card reveal-card">
+            <div class="project-thumb">
+              <div class="placeholder"><strong>Screenshot coming soon</strong>Fictional data</div>
             </div>
-          </div>
+            <div class="project-body">
+              <p class="project-kicker">Power Apps · Power Automate</p>
+              <h3>Document Control Tower</h3>
+              <p>A central portal where leadership finds every department's reports and presentations by area, subject and month, with automated workflows and role-based publishing.</p>
+              <ul class="tags"><li>Power Apps</li><li>Power Automate</li><li>SharePoint</li><li>Power BI</li></ul>
+              <a class="btn-glow" href="projects/document-control-tower.html">View project</a>
+            </div>
+          </article>
+
+          <article class="project-card reveal-card">
+            <div class="project-thumb">
+              <div class="placeholder"><strong>Screenshot coming soon</strong>Fictional data</div>
+            </div>
+            <div class="project-body">
+              <p class="project-kicker">Power Apps</p>
+              <h3>Quality Sampling Report</h3>
+              <p>A responsive app for operators to log quality samples per machine cavity, replacing manual records with validated, structured data.</p>
+              <ul class="tags"><li>Power Apps</li><li>Power Fx</li><li>SharePoint</li></ul>
+              <a class="btn-glow" href="projects/quality-sampling-report.html">View project</a>
+            </div>
+          </article>
+
+          <article class="project-card reveal-card">
+            <div class="project-thumb">
+              <img src="images/glpi/glpi-1-overview.png" alt="IT Service Desk Dashboard overview page" loading="lazy" width="1920" height="1093" />
+            </div>
+            <div class="project-body">
+              <p class="project-kicker">Power BI</p>
+              <h3>IT Service Desk Dashboard</h3>
+              <p>A Power BI dashboard on help desk data that shows IT ticket volume, backlog and SLA across support, SAP systems and infrastructure.</p>
+              <ul class="tags"><li>Power BI</li><li>DAX</li><li>Power Query</li><li>GLPI</li></ul>
+              <a class="btn-glow" href="projects/it-service-desk-dashboard.html">View project</a>
+            </div>
+          </article>
+
+          <article class="project-card reveal-card">
+            <div class="project-thumb">
+              <div class="placeholder"><strong>Screenshot coming soon</strong>Fictional data</div>
+            </div>
+            <div class="project-body">
+              <p class="project-kicker">Python · Microsoft Fabric</p>
+              <h3>Equipment Changeover Tracker</h3>
+              <p>A web app to record equipment changeovers on production lines, track spare stock and monitor each part's useful life, backed by a Fabric Lakehouse.</p>
+              <ul class="tags"><li>Python</li><li>Flask</li><li>Microsoft Fabric</li><li>Entra ID</li></ul>
+              <a class="btn-glow" href="projects/equipment-changeover-tracker.html">View project</a>
+            </div>
+          </article>
+
+          <article class="project-card reveal-card">
+            <div class="project-thumb">
+              <img src="images/carbon.png" alt="Code from the Spotify Music Recommender project" loading="lazy" />
+            </div>
+            <div class="project-body">
+              <p class="project-kicker">Machine Learning</p>
+              <h3>Spotify Music Recommender</h3>
+              <p>A music recommendation system using machine learning.</p>
+              <ul class="tags"><li>Machine Learning</li></ul>
+              <a class="btn-glow" href="projects/spotify-music-recommender.html">View project</a>
+            </div>
+          </article>
+
+          <article class="project-card reveal-card">
+            <div class="project-thumb">
+              <img src="images/projetopptx.png" alt="Cash Flow Dashboard" loading="lazy" />
+            </div>
+            <div class="project-body">
+              <p class="project-kicker">Dashboard</p>
+              <h3>Cash Flow Dashboard</h3>
+              <p>A financial dashboard with indicators and visualizations.</p>
+              <ul class="tags"><li>Data Visualization</li></ul>
+              <a class="btn-glow" href="projects/cash-flow-dashboard.html">View project</a>
+            </div>
+          </article>
+
         </div>
       </div>
     </section>
 
-    <!-- HABILIDADES -->
-    <section id="habilidades" class="section alt">
+    <!-- SKILLS -->
+    <section id="skills" class="section alt">
       <div class="container">
-        <h2 id="habilidadesTitle" class="section-title reveal">Habilidades</h2>
+        <h2 class="section-title reveal">Skills</h2>
         <div class="skills">
-          <div class="skill reveal-card"><h5>Python</h5><div class="bar"><div class="progress" data-value="95"></div></div></div>
-          <div class="skill reveal-card"><h5>SQL</h5><div class="bar"><div class="progress" data-value="92"></div></div></div>
-          <div class="skill reveal-card"><h5>Power BI</h5><div class="bar"><div class="progress" data-value="88"></div></div></div>
-          <div class="skill reveal-card"><h5>RPA / Automação</h5><div class="bar"><div class="progress" data-value="90"></div></div></div>
+          <div class="skill-group reveal-card">
+            <h3>Power Platform</h3>
+            <ul class="tags"><li>Power Apps</li><li>Power Fx</li><li>Power Automate</li><li>SharePoint</li></ul>
+          </div>
+          <div class="skill-group reveal-card">
+            <h3>BI and Analytics</h3>
+            <ul class="tags"><li>Power BI</li><li>DAX</li><li>Power Query</li><li>Semantic models</li></ul>
+          </div>
+          <div class="skill-group reveal-card">
+            <h3>Data and Programming</h3>
+            <ul class="tags"><li>SQL</li><li>Python</li><li>Pandas</li><li>OpenCV</li><li>ETL</li><li>Flask</li></ul>
+          </div>
+          <div class="skill-group reveal-card">
+            <h3>Platforms</h3>
+            <ul class="tags"><li>Microsoft Fabric</li><li>SAP S/4HANA</li></ul>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- CONTATO -->
-    <section id="contato" class="section contact">
+    <!-- EDUCATION -->
+    <section id="education" class="section">
       <div class="container">
-        <h2 id="contatoTitle" class="section-title reveal">Contato</h2>
+        <h2 class="section-title reveal">Education and Certifications</h2>
+        <div class="edu-grid">
+          <div class="card reveal-card">
+            <h3>Education</h3>
+            <ul class="list">
+              <li>Technologist Degree (CST) in Data Science with emphasis on AI — Uniamérica (expected Dec 2026)</li>
+              <li>Data Science Program — Escola DNC</li>
+              <li>Technical training in mechanics — SENAI</li>
+            </ul>
+          </div>
+          <div class="card reveal-card">
+            <h3>Certifications</h3>
+            <ul class="list">
+              <li>SQL for Data Analysis</li>
+              <li>SQL with PostgreSQL</li>
+              <li>Statistics with R</li>
+              <li>Statistics with Python</li>
+              <li>Introduction to Linear Regression Models</li>
+              <li>Python for Data Science</li>
+              <li>Apache Spark with Python</li>
+              <li>Data Science Track (Alura / DNC)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section contact alt">
+      <div class="container">
+        <h2 class="section-title reveal">Contact</h2>
         <div class="contact-grid">
           <div class="contact-card reveal-card">
-            <h4 id="emailTitle">Email</h4>
+            <h3>Email</h3>
             <a class="ghost-btn" href="mailto:felipenunesreis.2015@gmail.com">felipenunesreis.2015@gmail.com</a>
-            <h4 id="telefoneTitle">Telefone</h4>
+            <h3>Phone</h3>
             <p>(+55) 11 94542-4718</p>
-            <h4 id="whatsappTitle">WhatsApp</h4>
+            <h3>WhatsApp</h3>
             <a class="ghost-btn" href="https://wa.me/5511945424718" target="_blank" rel="noopener">
-              <img src="assets/WhatsApp.svg" alt="WhatsApp" style="width:20px;"> WhatsApp
+              <img src="assets/WhatsApp.svg" alt="" width="20" height="20"> WhatsApp
             </a>
           </div>
           <div class="contact-card reveal-card">
-            <h4 id="cvTitle">Currículo</h4>
-            <a class="ghost-btn" href="assets/CV_Felipe_Nunes_Reis.pdf" download>Baixar CV</a>
-            <h4 id="rdTitle">Redes</h4>
+            <h3>Resume</h3>
+            <div class="socials">
+              <a class="ghost-btn" href="assets/Felipe-Nunes-Reis-CV-EN.pdf" download>Download CV (English)</a>
+              <a class="ghost-btn" href="assets/Felipe-Nunes-Reis-CV-PT.pdf" download hreflang="pt-BR">Português</a>
+            </div>
+            <h3>Profiles</h3>
             <div class="socials">
               <a class="ghost-btn" href="https://www.linkedin.com/in/felipe-nunes-reis-b3a3061b6/" target="_blank" rel="noopener">LinkedIn</a>
-              <a class="ghost-btn" href="https://github.com/FelipeNunesReis" target="_blank" rel="noopener">Github</a>
+              <a class="ghost-btn" href="https://github.com/FelipeNunesReis" target="_blank" rel="noopener">GitHub</a>
             </div>
           </div>
         </div>
@@ -204,11 +298,10 @@
 
   <footer class="site-footer">
     <div class="container">
-      <p>© 2025 — Felipe Nunes Reis — Desenvolvido com atenção a acessibilidade e performance.</p>
+      <p>© 2026 Felipe Nunes Reis</p>
     </div>
   </footer>
 
   <script src="js/script.js"></script>
-  <script src="js/lang.js"></script>
 </body>
 </html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>IT Service Desk Dashboard — Felipe Nunes Reis</title>
+  <meta name="description" content="A Power BI dashboard on help desk data: IT ticket volume, backlog and SLA across support, SAP systems and infrastructure." />
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-grid">
+      <a href="../index.html" class="brand-link">Felipe <span>Nunes Reis</span></a>
+      <nav class="nav" aria-label="Main">
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#experience">Experience</a>
+        <a href="../index.html#projects">Projects</a>
+        <a href="../index.html#skills">Skills</a>
+        <a href="../index.html#contact">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <a href="https://www.linkedin.com/in/felipe-nunes-reis-b3a3061b6/" class="ghost-btn" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/FelipeNunesReis" class="ghost-btn" target="_blank" rel="noopener">GitHub</a>
+        <button id="mobileMenuBtn" class="mobile-menu-btn" aria-label="Open menu" aria-expanded="false">&#9776;</button>
+      </div>
+    </div>
+    <nav class="nav mobile-nav" aria-label="Mobile">
+      <a href="../index.html#about">About</a>
+      <a href="../index.html#experience">Experience</a>
+      <a href="../index.html#projects">Projects</a>
+      <a href="../index.html#skills">Skills</a>
+      <a href="../index.html#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="project-hero">
+      <a class="back-link" href="../index.html#projects">← Back to projects</a>
+      <p class="project-kicker">Power BI · DAX · Power Query</p>
+      <h1>IT Service Desk Dashboard</h1>
+      <p class="lead">A Power BI dashboard on help desk data for the IT team of an industrial company.</p>
+    </section>
+
+    <div class="project-layout">
+      <article>
+        <section class="project-section">
+          <h2>Problem</h2>
+          <p>There was no visibility into IT ticket volume, backlog and SLA across support, SAP systems and infrastructure.</p>
+        </section>
+
+        <section class="project-section">
+          <h2>Solution</h2>
+          <p>A Power BI dashboard built on GLPI help desk data and refreshed every hour, with one page for each area.</p>
+        </section>
+
+        <section class="project-section">
+          <h2>Key features</h2>
+          <ul class="feature-list">
+            <li><strong>Overview:</strong> open, closed and total tickets, the monthly trend, and tickets per technician.</li>
+            <li><strong>SAP systems:</strong> SLA compliance, median days to first response, tickets by SAP module, and created vs. closed tickets.</li>
+            <li><strong>Infrastructure:</strong> tickets by category, top requesters, and closed tickets per month.</li>
+            <li><strong>Hourly refresh</strong> and side navigation between pages, with a detail table on each page.</li>
+          </ul>
+        </section>
+
+        <section class="project-section">
+          <h2>Impact</h2>
+          <ul class="feature-list">
+            <li>Gave the IT team a single view of ticket volume, backlog and SLA.</li>
+            <li>Made SLA compliance and first-response time on SAP tickets visible.</li>
+          </ul>
+        </section>
+
+        <section class="project-section">
+          <h2>Screenshots</h2>
+          <p class="note">Names, logo and ticket details are blurred.</p>
+          <div class="gallery single">
+            <figure>
+              <a href="../images/glpi/glpi-1-overview.png" target="_blank" rel="noopener"><img src="../images/glpi/glpi-1-overview.png" alt="Overview page: open, closed and total tickets, monthly trend and tickets per technician" loading="lazy" /></a>
+              <figcaption>Overview: ticket totals, monthly trend and tickets per technician</figcaption>
+            </figure>
+            <figure>
+              <a href="../images/glpi/glpi-2-sap-systems.png" target="_blank" rel="noopener"><img src="../images/glpi/glpi-2-sap-systems.png" alt="SAP systems page: SLA compliance, median days to first response, tickets by SAP module, created vs. closed" loading="lazy" /></a>
+              <figcaption>SAP systems: SLA, first response, tickets by module, created vs. closed</figcaption>
+            </figure>
+            <figure>
+              <a href="../images/glpi/glpi-3-infrastructure.png" target="_blank" rel="noopener"><img src="../images/glpi/glpi-3-infrastructure.png" alt="Infrastructure page: tickets by category, top requesters and monthly closed tickets" loading="lazy" /></a>
+              <figcaption>Infrastructure: tickets by category, top requesters, closed per month</figcaption>
+            </figure>
+          </div>
+        </section>
+      </article>
+
+      <aside class="side-card">
+        <h2>Tools</h2>
+        <ul class="tags"><li>Power BI</li><li>DAX</li><li>Power Query</li><li>GLPI</li></ul>
+        <h2>Context</h2>
+        <p>Built for the IT team of an industrial company. Report labels are in Portuguese.</p>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container"><p>© 2026 Felipe Nunes Reis</p></div>
+  </footer>
+
+  <script src="../js/script.js"></script>
+</body>
+</html>
