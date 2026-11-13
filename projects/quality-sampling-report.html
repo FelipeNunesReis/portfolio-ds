@@ -3,100 +3,353 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Quality Sampling Report — Felipe Nunes Reis</title>
-  <meta name="description" content="A responsive Power Apps canvas app for operators to log quality samples per machine cavity." />
-  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <title>Quality Sampling Report — Case study — Felipe Nunes Reis</title>
+  <meta name="description" content="Case study: a responsive Power Apps canvas app where production operators log quality samples per machine cavity, with smart defaults and validation rules, saving to SharePoint." />
+  <meta name="theme-color" content="#0e0e11" />
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" />
   <link rel="stylesheet" href="../css/style.css" />
+  <script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
   <header class="site-header">
     <div class="container header-grid">
-      <a href="../index.html" class="brand-link">Felipe <span>Nunes Reis</span></a>
+      <a href="../index.html" class="brand">Felipe <span>Nunes Reis</span></a>
       <nav class="nav" aria-label="Main">
+        <a href="../index.html">Home</a>
         <a href="../index.html#about">About</a>
-        <a href="../index.html#experience">Experience</a>
-        <a href="../index.html#projects">Projects</a>
+        <a href="../index.html#projects" aria-current="true">Projects</a>
         <a href="../index.html#skills">Skills</a>
+        <a href="../index.html#experience">Experience</a>
         <a href="../index.html#contact">Contact</a>
       </nav>
       <div class="header-actions">
-        <a href="https://www.linkedin.com/in/felipe-nunes-reis-b3a3061b6/" class="ghost-btn" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="https://github.com/FelipeNunesReis" class="ghost-btn" target="_blank" rel="noopener">GitHub</a>
-        <button id="mobileMenuBtn" class="mobile-menu-btn" aria-label="Open menu" aria-expanded="false">&#9776;</button>
+        <a class="btn ghost" href="https://www.linkedin.com/in/felipe-nunes-reis-b3a3061b6/" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn ghost" href="https://github.com/FelipeNunesReis" target="_blank" rel="noopener">GitHub</a>
+        <button class="icon-btn theme-toggle" type="button" aria-label="Switch theme">
+          <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+          <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        </button>
+        <button class="icon-btn menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
       </div>
     </div>
-    <nav class="nav mobile-nav" aria-label="Mobile">
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile">
+      <a href="../index.html">Home</a>
       <a href="../index.html#about">About</a>
-      <a href="../index.html#experience">Experience</a>
       <a href="../index.html#projects">Projects</a>
       <a href="../index.html#skills">Skills</a>
+      <a href="../index.html#experience">Experience</a>
       <a href="../index.html#contact">Contact</a>
     </nav>
   </header>
 
-  <main class="container">
-    <section class="project-hero">
-      <a class="back-link" href="../index.html#projects">← Back to projects</a>
-      <p class="project-kicker">Power Apps · SharePoint</p>
+  <main id="main" class="container">
+    <section class="cs-hero">
+      <a class="back" href="../index.html#projects"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"/></svg> All projects</a>
+      <span class="eyebrow">Power Platform · Case study 2 of 6</span>
       <h1>Quality Sampling Report</h1>
-      <p class="lead">A responsive app for operators to log quality samples per machine cavity, built for an industrial company.</p>
+      <p class="lead">A responsive Power Apps canvas app where production operators log quality samples per machine cavity in a few taps. Smart defaults, validation rules and a "tap only the defects" grid replaced manual records with structured data in SharePoint.</p>
+      <ul class="badges"><li>Power Apps</li><li>Power Fx</li><li>Collections</li><li>Responsive containers</li><li>SharePoint lists</li></ul>
+      <dl class="cs-meta">
+        <div><dt>My role</dt><dd>Designed and built end to end</dd></div>
+        <div><dt>Built for</dt><dd>Quality and production teams of an industrial company</dd></div>
+        <div><dt>Devices</dt><dd>Tablet, desktop and phone</dd></div>
+        <div><dt>Scope</dt><dd>2 screens, 3 SharePoint lists</dd></div>
+      </dl>
     </section>
 
-    <div class="project-layout">
+    <div class="cs-layout">
+      <nav class="cs-toc" aria-label="On this page">
+        <ol>
+          <li><a href="#overview">Overview</a></li>
+          <li><a href="#context">Context and problem</a></li>
+          <li><a href="#role">My role</a></li>
+          <li><a href="#architecture">Architecture</a></li>
+          <li><a href="#features">Key features</a></li>
+          <li><a href="#highlights">Technical highlights</a></li>
+          <li><a href="#challenges">Challenges</a></li>
+          <li><a href="#results">Results</a></li>
+          <li><a href="#tools">Tools</a></li>
+        </ol>
+      </nav>
+
       <article>
-        <section class="project-section">
-          <h2>Problem</h2>
-          <p>Quality sampling on production lines was recorded manually. That was slow, error-prone and hard to track per shift.</p>
+        <section class="cs-section" id="overview">
+          <h2>Overview</h2>
+          <p>Several times per shift, an operator inspects the pieces coming out of each cavity of a forming machine and records which ones show a defect. This app turns that inspection into a two-screen flow: a guided start screen (process → line → shift → products → person → time) and a sampling screen with one card per cavity. Every cavity starts as "no defect", so the operator only touches the defective ones. On save, the app validates the sample and writes one row per product to a SharePoint list.</p>
         </section>
 
-        <section class="project-section">
-          <h2>Solution</h2>
-          <p>A responsive Power Apps canvas app (tablet, desktop and mobile) where operators log quality samples per machine cavity, saving structured records to SharePoint.</p>
+        <section class="cs-section" id="context">
+          <h2>Context and problem</h2>
+          <p>Sampling was recorded by hand on forms, then transcribed. It was slow, inconsistent between shifts and operators, and hard to analyze: the same cavity, mold or product could be written in different ways, and night-shift samples were often filed under the wrong date. Quality needed per-shift, per-machine data they could trust and aggregate.</p>
         </section>
 
-        <section class="project-section">
+        <section class="cs-section" id="role">
+          <h2>My role</h2>
+          <p>I designed the flow with the quality team, built both screens and all the Power Fx logic, modeled the SharePoint lists (samples, defect types, lines and products), and made the layout responsive so the same app runs on the tablets at the lines, on desktops in the quality office and on phones.</p>
+        </section>
+
+        <section class="cs-section" id="architecture">
+          <h2>Architecture</h2>
+          <figure class="diagram">
+            <svg viewBox="0 0 960 360" role="img" aria-labelledby="dgs-title dgs-desc">
+              <title id="dgs-title">Quality Sampling Report architecture</title>
+              <desc id="dgs-desc">An operator on a tablet uses a Power Apps canvas app with two screens. The start screen uses cascading selectors and shows the shift's samples from the samples list. The sampling screen builds a cavity grid in local collections, pre-filled from the last sample on that line, and on save validates and writes one row per product to the SharePoint samples list. Reference lists hold defect types, lines and products.</desc>
+              <defs>
+                <marker id="dgs-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5 0 10z" fill="var(--muted)"/></marker>
+              </defs>
+              <g font-size="14" font-family="inherit">
+                <rect x="20" y="130" width="140" height="100" rx="12" fill="var(--panel-2)" stroke="var(--line-strong)"/>
+                <text x="90" y="166" text-anchor="middle" fill="var(--text)" font-weight="600">Operator</text>
+                <text x="90" y="190" text-anchor="middle" fill="var(--muted)" font-size="13">tablet · desktop · phone</text>
+
+                <rect x="220" y="40" width="440" height="280" rx="14" fill="var(--accent-soft)" stroke="var(--accent)"/>
+                <text x="440" y="70" text-anchor="middle" fill="var(--text)" font-weight="700">Power Apps canvas app</text>
+
+                <rect x="240" y="90" width="190" height="110" rx="10" fill="var(--panel)" stroke="var(--line-strong)"/>
+                <text x="335" y="116" text-anchor="middle" fill="var(--text)" font-weight="600">Start screen</text>
+                <text x="335" y="140" text-anchor="middle" fill="var(--muted)" font-size="12.5">cascading selectors</text>
+                <text x="335" y="158" text-anchor="middle" fill="var(--muted)" font-size="12.5">required-field check</text>
+                <text x="335" y="176" text-anchor="middle" fill="var(--muted)" font-size="12.5">shift history chips</text>
+
+                <rect x="450" y="90" width="190" height="110" rx="10" fill="var(--panel)" stroke="var(--line-strong)"/>
+                <text x="545" y="116" text-anchor="middle" fill="var(--text)" font-weight="600">Sampling screen</text>
+                <text x="545" y="140" text-anchor="middle" fill="var(--muted)" font-size="12.5">cavity grid (6–8 sections)</text>
+                <text x="545" y="158" text-anchor="middle" fill="var(--muted)" font-size="12.5">defect / mold / notes</text>
+                <text x="545" y="176" text-anchor="middle" fill="var(--muted)" font-size="12.5">validate + save</text>
+
+                <rect x="240" y="220" width="400" height="80" rx="10" fill="var(--panel)" stroke="var(--line-strong)" stroke-dasharray="5 4"/>
+                <text x="440" y="246" text-anchor="middle" fill="var(--text)" font-weight="600">Local collections</text>
+                <text x="440" y="270" text-anchor="middle" fill="var(--muted)" font-size="12.5">cavities · products of this sample · last sample on this line · defect types</text>
+
+                <rect x="730" y="60" width="210" height="110" rx="12" fill="var(--panel-2)" stroke="var(--line-strong)"/>
+                <text x="835" y="90" text-anchor="middle" fill="var(--text)" font-weight="600">SharePoint: Samples</text>
+                <text x="835" y="114" text-anchor="middle" fill="var(--muted)" font-size="13">1 row per product per sample</text>
+                <text x="835" y="134" text-anchor="middle" fill="var(--muted)" font-size="13">cavity columns + mold numbers</text>
+                <text x="835" y="154" text-anchor="middle" fill="var(--muted)" font-size="13">notes</text>
+
+                <rect x="730" y="200" width="210" height="100" rx="12" fill="var(--panel-2)" stroke="var(--line-strong)"/>
+                <text x="835" y="230" text-anchor="middle" fill="var(--text)" font-weight="600">Reference lists</text>
+                <text x="835" y="254" text-anchor="middle" fill="var(--muted)" font-size="13">defect types</text>
+                <text x="835" y="274" text-anchor="middle" fill="var(--muted)" font-size="13">lines, products, people</text>
+
+                <g stroke="var(--muted)" stroke-width="2" fill="none" marker-end="url(#dgs-arrow)">
+                  <path d="M160 180H218"/>
+                  <path d="M430 145H448"/>
+                  <path d="M660 110H728"/>
+                  <path d="M728 140C700 140 690 150 660 150" />
+                  <path d="M660 250H728"/>
+                  <path d="M335 200V218"/>
+                  <path d="M545 200V218"/>
+                </g>
+                <g fill="var(--muted)" font-size="12">
+                  <text x="665" y="98">save</text>
+                  <text x="665" y="168">read last sample</text>
+                  <text x="665" y="240">read</text>
+                </g>
+              </g>
+            </svg>
+            <figcaption>Everything the operator touches works on local collections; SharePoint is read when a screen opens and written once on save.</figcaption>
+          </figure>
+          <h3>Data flow in short</h3>
+          <ul>
+            <li><strong>Start screen:</strong> selectors cascade (process filters lines, line filters products). The samples already logged for this line and shift appear as time chips; tapping one reopens that sample read-only.</li>
+            <li><strong>Opening the sampling screen:</strong> the app reads the most recent sample on the same line and process, and builds the cavity collection from the number of sections of that machine type, pre-filling each section's product and mold number.</li>
+            <li><strong>Save:</strong> four validations run in order; if all pass, the app writes one row per product (each row carries only that product's cavities) inside an error handler, then returns to the start screen.</li>
+          </ul>
+        </section>
+
+        <section class="cs-section" id="features">
           <h2>Key features</h2>
-          <ul class="feature-list">
-            <li><strong>Guided start screen:</strong> process → line → shift → product(s) → responsible person → date and time, with cascading filters and required-field validation.</li>
-            <li><strong>Shift history:</strong> samples already logged in the current shift appear as clickable time chips (including night shifts that cross midnight). Clicking one opens it read-only.</li>
-            <li><strong>Visual cavity grid:</strong> cavities are grouped by machine section (6 or 8 sections, inner and outer). Every cavity starts as "no defect", so the operator only taps the defective ones to add the defect type, mold number and notes.</li>
-            <li><strong>Smart defaults:</strong> each section inherits its product and mold numbers from the last sample on that line.</li>
-            <li><strong>Multiple products per sample:</strong> each section can be assigned to a product, color-coded, with alerts when a section changes.</li>
-            <li><strong>Data integrity:</strong> blocks duplicates (same line and date/time), requires every section to have a product and every product at least one section, and writes one record per product with error handling.</li>
-            <li><strong>Live counter</strong> of defective cavities.</li>
-          </ul>
-        </section>
 
-        <section class="project-section">
-          <h2>Impact</h2>
-          <ul class="feature-list">
-            <li>Replaced manual sampling records with a guided digital form.</li>
-            <li>Validation rules prevent duplicate and incomplete samples.</li>
-            <li>Produces structured records per shift, ready for reporting and analysis.</li>
-          </ul>
-        </section>
+          <div class="feature">
+            <div>
+              <h3>Guided start with shift history</h3>
+              <p>Process, line, shift, products, responsible person and time. The "advance" button only enables when every field is valid and at most six products are selected. Samples already logged in this shift show as time chips, so the operator sees at a glance what is done.</p>
+            </div>
+            <figure class="shot">
+              <a href="../images/relatorio_amostragem/start-screen.webp" target="_blank" rel="noopener">
+                <picture>
+                  <source type="image/webp" srcset="../images/relatorio_amostragem/start-screen.webp" />
+                  <img src="../images/relatorio_amostragem/start-screen.png" alt="Start screen with process, line, shift, date and time, product and responsible person selectors, and two time chips for samples already logged" loading="lazy" width="1069" height="618" />
+                </picture>
+              </a>
+              <figcaption>Start screen. Line, product and person values are blanked in the screenshot.</figcaption>
+            </figure>
+          </div>
 
-        <section class="project-section">
-          <h2>Screenshots</h2>
-          <div class="gallery">
-            <figure><div class="placeholder"><strong>Screenshot coming soon</strong>Start screen</div><figcaption>Guided start screen with shift history chips</figcaption></figure>
-            <figure><div class="placeholder"><strong>Screenshot coming soon</strong>Cavity grid</div><figcaption>Cavity grid with defects marked</figcaption></figure>
+          <div class="feature">
+            <div>
+              <h3>Tap only the defects</h3>
+              <p>One card per cavity, grouped by section and side (inner / outer). All cards start as "no defect / OK" with the inherited mold number. Tapping a card opens a small panel to pick the defect type, correct the mold number and add a note. A live counter shows how many cavities have a defect.</p>
+            </div>
+            <figure class="shot">
+              <a href="../images/relatorio_amostragem/cavity-grid.webp" target="_blank" rel="noopener">
+                <picture>
+                  <source type="image/webp" srcset="../images/relatorio_amostragem/cavity-grid.webp" />
+                  <img src="../images/relatorio_amostragem/cavity-grid.png" alt="Sampling screen: a grid of twelve cavity cards, each showing section, side, 'no defect' and a mold number, with a live counter of defective cavities" loading="lazy" width="1051" height="601" />
+                </picture>
+              </a>
+              <figcaption>Cavity grid for a six-section machine (12 cavities).</figcaption>
+            </figure>
+          </div>
+
+          <div class="feature">
+            <div>
+              <h3>Smart defaults and multiple products</h3>
+              <p>Each section inherits the product and mold number from the last sample on that line. When a machine runs more than one product, each section can be assigned to one of them; changing a section re-applies the right mold numbers and the save rules require every section to have a product and every product at least one section.</p>
+            </div>
+            <figure class="shot">
+              <a href="../images/relatorio_amostragem/multi-product-mobile.webp" target="_blank" rel="noopener">
+                <picture>
+                  <source type="image/webp" srcset="../images/relatorio_amostragem/multi-product-mobile.webp" />
+                  <img src="../images/relatorio_amostragem/multi-product-mobile.png" alt="Sampling screen on a phone, opened from a history chip: the header shows line, shift, product and time, and the cavity cards for that product are listed read-only with their mold numbers" loading="lazy" width="490" height="787" />
+                </picture>
+              </a>
+              <figcaption>Phone view of a saved sample for one product: only that product's sections are listed, with inherited mold numbers.</figcaption>
+            </figure>
+          </div>
+
+          <div class="feature">
+            <div>
+              <h3>Same app on tablet, desktop and phone</h3>
+              <p>Responsive containers reflow the selectors into one column on phones and keep the cavity grid readable on tablets. Button widths, positions and font sizes follow the container width.</p>
+            </div>
+            <figure class="shot">
+              <a href="../images/relatorio_amostragem/mobile.webp" target="_blank" rel="noopener">
+                <picture>
+                  <source type="image/webp" srcset="../images/relatorio_amostragem/mobile.webp" />
+                  <img src="../images/relatorio_amostragem/mobile.png" alt="The start screen on a phone: selectors stacked in a single column" loading="lazy" width="645" height="837" />
+                </picture>
+              </a>
+              <figcaption>Phone layout of the start screen.</figcaption>
+            </figure>
           </div>
         </section>
-      </article>
 
-      <aside class="side-card">
-        <h2>Tools</h2>
-        <ul class="tags"><li>Power Apps</li><li>Power Fx</li><li>Collections</li><li>Responsive containers</li><li>SharePoint</li></ul>
-        <h2>Context</h2>
-        <p>Built for an industrial company. Screenshots use fictional data and a generic theme.</p>
-      </aside>
+        <section class="cs-section" id="highlights">
+          <h2>Technical highlights</h2>
+          <p>Snippets are rewritten with generic names; they show the logic, not the production code.</p>
+
+          <div class="highlight">
+            <h3>Night shift crossing midnight</h3>
+            <p>The third shift starts in the evening and ends the next morning. Before 07:00, "today's" night shift actually started yesterday. The chip list computes the shift date and then matches samples by two date prefixes: late hours of the shift date and early hours of the next day.</p>
+<pre><code>With({
+    isNight:   StartsWith(ddShift.Selected.Name, "3"),
+    shiftDate: If(StartsWith(ddShift.Selected.Name, "3") && Hour(Now()) &lt; 7,
+                  DateAdd(Today(), -1, TimeUnit.Days), Today())
+  },
+  Filter(colShiftSamples,
+    If(isNight,
+       StartsWith(DateTimeText, Text(shiftDate, "dd/mm/yyyy") &amp; " 2")                          // 20:00–23:59
+       || StartsWith(DateTimeText, Text(DateAdd(shiftDate, 1, TimeUnit.Days), "dd/mm/yyyy") &amp; " 0"),  // 00:00–09:59
+       StartsWith(DateTimeText, Text(shiftDate, "dd/mm/yyyy"))
+    )
+  )
+)</code></pre>
+          </div>
+
+          <div class="highlight">
+            <h3>Inheriting the last sample's settings</h3>
+            <p>When the sampling screen opens, the app looks up the latest record for the same line and process, expands its section columns into a small table (section → product → mold number), and uses it to pre-fill the grid. Operators change only what changed.</p>
+<pre><code>// Latest sample on this line and process
+Set(varLastTime, First(Sort(Filter(Samples, Line = varLine, Process = varProcess), ID, SortOrder.Descending)).DateTimeText);
+
+// One row per section from that sample: {Product, Section, MoldNumber}
+ClearCollect(colLastMolds,
+    ForAll(Filter(Samples, Line = varLine, Process = varProcess, DateTimeText = varLastTime) As r,
+        Table({Product: r.Product, Section: "S1 · Inner", Mold: r.Mold1Inner},
+              {Product: r.Product, Section: "S1 · Outer", Mold: r.Mold1Outer}, ...)));
+
+// Build the grid: sections × 2 sides, pre-filled from colLastMolds
+ClearCollect(colCavities,
+    ForAll(Sequence(varSections * 2) As c,
+        With({n: RoundUp(c.Value / 2, 0), side: If(Mod(c.Value, 2) = 1, "Inner", "Outer")},
+             {Section: n, Side: side, Defect: "No defect / OK",
+              Product: LookUp(colLastMolds, Section = "S" &amp; n &amp; " · Inner").Product,
+              Mold:    Coalesce(LookUp(colLastMolds, Section = "S" &amp; n &amp; " · " &amp; side).Mold, Text(10 + n))})));</code></pre>
+          </div>
+
+          <div class="highlight">
+            <h3>Validation chain before saving</h3>
+            <p>Save runs four checks in order and stops at the first failure with a specific message: required date and time; every section has a product (multi-product only); every selected product has at least one section; and no sample already exists for this line at this date and time. Only then does it write, inside an error handler, one row per product.</p>
+<pre><code>If(
+    IsBlank(dpDate.SelectedDate) || IsBlank(ddHour.Selected.Value),
+        Notify("Fill in the date and time.", NotificationType.Warning),
+    varMultiProduct && !IsEmpty(Filter(colCavities, Side = "Inner" && IsBlank(Product))),
+        Notify("Assign a product to every section.", NotificationType.Warning),
+    !IsEmpty(Filter(colProducts As p, IsEmpty(Filter(colCavities, Active && Product = p.Name)))),
+        Notify("Each product needs at least one section.", NotificationType.Warning),
+    !IsBlank(LookUp(Samples, Line = varLine && DateTimeText = varDateTime)),
+        Notify("A sample already exists for this line at this time.", NotificationType.Error),
+    IfError(
+        ForAll(colProducts As p, Patch(Samples, Defaults(Samples), { /* this product's cavities */ })),
+        Notify("Could not save: " &amp; FirstError.Message, NotificationType.Error),
+        Notify("Saved.", NotificationType.Success); Navigate(StartScreen)
+    )
+)</code></pre>
+          </div>
+
+          <div class="highlight">
+            <h3>Grid generated from the machine type</h3>
+            <p>Machine types have six or eight sections, and on one line the outer cavity does not exist for single-gob products. The grid is generated with <code>Sequence(sections × 2)</code> and an <code>Active</code> flag per cavity, so the same screen serves every machine without duplicated layouts.</p>
+          </div>
+        </section>
+
+        <section class="cs-section" id="challenges">
+          <h2>Challenges and how I solved them</h2>
+          <div class="challenge">
+            <div><h4>Challenge</h4><p>Operators work fast, with gloves, on a tablet at the line. Filling 12–16 cavity fields per sample was not realistic.</p></div>
+            <div><h4>Solution</h4><p>Every cavity defaults to "no defect" with inherited mold numbers; the operator taps only the defective ones. A typical clean sample is three taps.</p></div>
+          </div>
+          <div class="challenge">
+            <div><h4>Challenge</h4><p>Night-shift samples were filed under the wrong date, so the shift history looked empty after midnight.</p></div>
+            <div><h4>Solution</h4><p>The shift date is derived from the shift and the current hour, and history is matched across two calendar days.</p></div>
+          </div>
+          <div class="challenge">
+            <div><h4>Challenge</h4><p>Some machines run two or more products at once, which a single-product form could not represent.</p></div>
+            <div><h4>Solution</h4><p>Products are assigned per section, color-coded in the grid, and saved as one row per product. The rules guarantee every section and every product are covered.</p></div>
+          </div>
+          <div class="challenge">
+            <div><h4>Challenge</h4><p>Duplicate and incomplete samples polluted the data.</p></div>
+            <div><h4>Solution</h4><p>A validation chain with specific messages, a duplicate check on line + time, and a write wrapped in an error handler.</p></div>
+          </div>
+        </section>
+
+        <section class="cs-section" id="results">
+          <h2>Results</h2>
+          <ul class="results">
+            <li>Manual sampling records replaced by a guided digital form on the line.</li>
+            <li>Consistent, structured records per shift, line, product and cavity, ready for reporting.</li>
+            <li>Validation rules stop duplicate and incomplete samples before they are saved.</li>
+            <li>One app for tablets, desktops and phones.</li>
+          </ul>
+        </section>
+
+        <section class="cs-section" id="tools">
+          <h2>Tools</h2>
+          <ul class="badges"><li>Power Apps (canvas)</li><li>Power Fx</li><li>Collections</li><li>Responsive containers</li><li>Galleries</li><li>SharePoint lists</li></ul>
+        </section>
+
+        <nav class="pager" aria-label="Project navigation">
+          <a class="prev" href="document-control-tower.html"><span>← Previous</span><strong>Document Control Tower</strong></a>
+          <a class="next" href="it-service-desk-dashboard.html"><span>Next →</span><strong>IT Service Desk Dashboard</strong></a>
+        </nav>
+      </article>
     </div>
   </main>
 
   <footer class="site-footer">
-    <div class="container"><p>© 2026 Felipe Nunes Reis</p></div>
+    <div class="container">
+      <span>© 2026 Felipe Nunes Reis</span>
+      <span>Screenshots are redacted; no company data is shown.</span>
+    </div>
   </footer>
 
   <script src="../js/script.js"></script>
